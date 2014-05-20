@@ -1,4 +1,4 @@
-
+/* Override styling for Connection Tool, by TW */
 
 body {
 	color: #616161;
@@ -8,10 +8,18 @@ body {
 /* Header + Footer */
 
 header {
-	height: 111px;
+	height: 120px;
 	background: #F4F4F5;
+	margin-bottom: 60px;
 }
 
+header ul {
+	margin-top: 30px;
+}
+header ul li{
+	display: inline;
+	list-style: none;
+}
 .hide-text {
 	display: none;
 }
