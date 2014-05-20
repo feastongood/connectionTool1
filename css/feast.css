@@ -1,0 +1,957 @@
+/*
+Theme Name: Feast 2013
+Theme URI: http://www.feastongood.com
+Author: Tony Chu
+Author URI: http://www.tonyhschu.ca/
+Description: Feast child theme for the required+ Foundation parent theme.
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0.4
+Template: required-foundation
+Text Domain: requiredstarter
+*/
+
+/*
+	Make the template work
+*/
+
+
+body { 
+	background: #f4f4f5;
+	font-family: "proxima-nova",sans-serif;
+	letter-spacing: 0.05em;
+}
+body.page-template-default,
+body.page-template-feast-speakers-page-php {
+	background: #fff;
+}
+h1, h2, h3, h4, h5, h6 { font-family: "league-gothic", sans-serif; font-weight: 300; letter-spacing: 0.03em; text-transform: uppercase; color: #616161; }
+a { color: #ed117d; }
+#top {
+	z-index: 1000;
+}
+.page-template-default #top,
+.page-template-feast-speakers-page-php #top {
+	background: #f4f4f5;
+}
+.nav-bar {
+	font-family: "league-gothic", sans-serif;
+	text-transform: uppercase;
+	background: none;
+	margin: 0;
+	text-align: center;
+}
+.nav-bar > li {
+	background-color: #00debc;
+	border: none;
+	display: inline-block;
+	margin: 0 0 0.3em 3px;
+	font-size: 12px;
+}
+.nav-bar > li > a:first-child {
+	font-size: 16px;
+	padding: 2px 7px;
+	line-height: 1.7em;
+	color: #fff;
+}
+.nav-bar > li > a:hover {
+	background: #616161;
+	cursor: pointer !important;
+}
+.nav-bar > li:last-child {
+	border: none;
+}
+#applynow {
+	background-color: #ed117d;
+}
+#submenu {
+	font-family: "league-gothic", sans-serif;
+	padding: 2em;
+	background: #00debc;
+	display: none;
+	z-index: 1000;
+	position: relative;
+}
+#submenu.active, #submenu.permanentactive {
+	display: block;
+}
+
+#submenu ul {
+	list-style: none;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+#submenu li {
+	width: 33.3%;
+	float: left;
+	margin: -1px 0 0 -1px;
+	background: #00debc;
+	text-align: center;
+	border-left: 1px solid rgba(255,255,255,0.4);
+	border-top: 1px solid rgba(255,255,255,0.4);
+}
+#submenu a {
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 0.3em 0;
+	display: block;
+}
+
+#site-title a {
+	background: url("images/feast-logo-mobile.gif") no-repeat top left;
+	display: block;
+	width: 111px;
+	height: 33px;
+	margin: 0 auto;
+}
+#menu-meta {
+	display: none;
+}
+#menu-meta li {
+	padding: 0 0 0 6px;
+	margin: 0 0 0 6px;
+	border-left: 1px solid #777;
+}
+#menu-meta li:first-child {
+	border-left: none;
+}
+#menu-meta a {
+	line-height: 1;
+	font-size: 11px;
+	color: #777;
+}
+
+.hide-text {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+}
+
+.required-header .inline-list {
+	margin-top: 14px;
+}
+
+/* Orbit */
+#home-orbit {
+	text-align: center;
+}
+.orbit-slide {
+	position: relative;
+}
+#home-orbit .slideImage {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 300;
+}
+#home-orbit .slideImage img {
+	width: 100%;
+	max-width: 1400px;
+	display: inline;
+}
+#home-orbit .slideContent {
+	text-align: left;
+	background: rgba(0,0,0,0.5);
+	position: relative;
+	margin: 17% auto 0;
+	padding: 30px 0;
+	max-width: 1400px;
+	z-index: 400;
+}
+#home-orbit .slideContent p {
+	font-size: 1.3em;
+}
+#home-orbit .slideContent p a {
+	font-weight: bold;
+}
+#home-orbit .slideContent p, #home-orbit .slideContent h1 {
+	max-width: 940px;
+	padding: 0 20px;
+	margin: 0 auto;
+	color: #fff;
+}
+#home-orbit .initialContent {
+	text-align: center;
+	background: rgba(0,0,0,0.5);
+	position: relative;
+	margin: -20px auto 0;
+	max-width: 1400px;
+	z-index: 400;
+	height: 102%;
+}
+#home-orbit .initialContent h1 {
+	padding-top: 9%;
+	font-size: 5em;
+}
+#home-orbit .initialContent p {
+	font-size: 1.5em;
+}
+#home-orbit .initialContent p, #home-orbit .initialContent h1 {
+	color: #fff;
+	
+}
+
+#home-orbit .orbit-slide a{
+	display:inline-block;
+	background:#ed117d;
+	color:white;
+	padding:5px 10px 5px 10px;
+	margin-top:10px;
+	font-weight:500;
+}
+#home-orbit .orbit-slide a:hover{
+	background-color:#00debc;
+
+}
+/* Splash */
+#splash {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1440px;
+	position: relative;
+	overflow: hidden;
+}
+#splash .wp-post-image {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#splashcontent {
+	margin: 7em 0;
+	padding: 1em 0;
+	position: relative;
+	background: rgba(255,255,255,0.85);
+}
+#splashcontent h1 {
+	text-transform: uppercase;
+	font-size: 52px;
+	margin-bottom: 0;
+	color: #616161;
+	letter-spacing: 0.05em;
+}
+#splashcontent h2 {
+	text-transform: uppercase;
+	font-size: 38px;
+	margin-top: 0;
+	color: #616161;
+	letter-spacing: 0.05em;
+}
+#splashcontent p {
+	font-size: 18px;
+}
+
+/* Content */
+.grey {
+	background: #fafafa;
+}
+#content h1 {
+	color: #00debc;
+	font-size: 60px;
+}
+#subhead {
+	margin: -1em 0 1.5em;
+	font-size: 1.3em;
+	line-height: 1.1em;
+}
+.portrait {
+	max-width: 480px;
+	height: auto;
+}
+
+/*subfooter*/
+
+#legal a {
+	color: #FFFFFF; /* white */
+	font-size: 12px;
+	font-family: "alright" sans-serif;
+}
+#legal p {
+font-size: 12px;
+font-family: "alright" sans-serif;
+}
+
+#legal{
+margin-top: 72px;
+text-align: center;
+font-family: "alright" sans-serif;
+}
+
+/*Subscription Section*/
+#signup{
+margin: 0 auto;
+margin-top: 53px;
+text-align: center;
+font-family: "alright" sans-serif;
+}
+
+#signup p {
+font-size: 12px;
+font-family: "alright" sans-serif;
+}
+
+input.button.mc-embedded-subscribe{
+background: #00DEBC;
+width:75px;
+height: 35px;
+box-shadow: none;
+font-family: "league-gothic", sans-serif;
+text-transform: uppercase;
+font-size: 15px;
+float: right;
+}
+
+input.mce-EMAIL.required.email{
+width: 200px;
+height: 35px;
+float: left;
+}
+
+form.mc-embedded-subscribe-form{
+width: 280px;
+margin: 0 auto;
+}
+
+#footersocialicons{
+width: 159px;
+margin: 0 auto;
+margin-top: 93px;
+}
+#footersocialicons li{
+display: inline;
+}
+
+/*social icons*/
+.facebook{
+	display: inline-block;
+	width: 28px;
+	height: 27px;
+	background: url('images/social_icons/facebook_feast.png') bottom;
+	text-indent: -99999px;
+}
+.facebook:hover {
+	background-position: 0 0;
+}
+.twitter{
+	display: inline-block;
+	width: 28px;
+	height: 27px;
+	background: url('images/social_icons/twitter_feast.png') bottom;
+	text-indent: -99999px;
+}
+.twitter:hover {
+	background-position: 0 0;
+}
+.vimeo{
+	display: inline-block;
+	width: 28px;
+	height: 27px;
+	background: url('images/social_icons/vimeo_feast.png') bottom;
+	text-indent: -99999px;
+}
+.vimeo:hover {
+	background-position: 0 0;
+}
+.tumblr{
+	display: inline-block;
+	width: 27px;
+	height: 27px;
+	background: url('images/social_icons/tumblr_feast.png') bottom;
+	text-indent: -99999px;
+}
+.tumblr:hover {
+	background-position: 0 0;
+}
+.instagram{
+	display: inline-block;
+	width: 27px;
+	height: 27px;
+	background: url('images/social_icons/instagram_feast.png') bottom;
+	text-indent: -99999px;
+}
+.instagram:hover {
+	background-position: 0 0;
+}
+
+/* Footer */
+@media only screen and (max-width: 767px) {
+	.wp-post-image { display: none; }
+	#testimonialquote {
+		display: none;
+	}
+	.nav-bar {
+		padding-bottom: 7px;
+	}
+	#menu-conference.active a:after {
+		content: " ";
+		display: block;
+		width: 1px;
+		border-bottom: 7px solid #00debc;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		position: absolute;
+		top: 112%;
+		left: 50%;
+		margin-left: -10px;
+		color: #000;
+	}
+	#banner.columns {
+		padding: 0;
+	}
+	#submenu {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 100%;
+		z-index: 900;
+		margin: 0;
+	}
+	#submenu.permanentactive {
+		position: relative;
+	}
+	#home-orbit .initialContent h1 {
+		padding-top: 12%;
+		font-size: 3em;
+	}
+	#home-orbit .initialContent p {
+		font-size: 1em;
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+	#home-orbit .initialContent br {
+		display: none;
+	}
+}
+#testimonialquote {
+	background: #00debc;
+	color: #512150;
+	text-align: center;
+	padding: 2em 0 3em;
+}
+#textimonialquote blockquote {
+	max-width: 800px;
+}
+
+blockquote {
+font-size: 24px;
+font-family: "kepler-std-caption", serif;
+font-weight: 700;
+color: #512150;
+}
+
+#footer {
+	background: #3d0137;
+	color: #f1f1f1;
+	padding: 0 0 3em 0;
+}
+#footer blockquote {
+	border-left: none;
+}
+#footer h2 {
+	color: #512150;
+}
+#quotesymbol {
+	font-size: 4em;
+	color: #fcd804;
+	font-family: "kepler-std-caption", serif;
+	margin: 0 0 -1em;
+	padding: 0;
+	
+}
+
+@media only screen and (min-width: 766px) {
+	.nav-bar {
+		float: right;
+		margin-top: 12px;
+	}
+	.nav-bar > li > a:first-child {
+		font-size: 18px;
+	}
+	#banner {
+		height: 111px;
+	}
+	#menu-meta {
+		display: block;
+		margin: 2em 0 0;
+	}
+	#submenu {
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		right: 0;
+		top: 100%;
+	}
+	#submenu ul {
+		list-style: none;
+	}
+	#submenu li {
+		display: inline-block;
+		background: #00debc;
+		margin: 0;
+		padding: 0;
+		float: left;
+		border: none;
+		width: inherit;
+	}
+	#submenu a {
+		display: block;
+		padding: 5px 0.1em 5px 0;
+	}
+	#submenu a:hover {
+		color: #555;
+	}
+	#submenu a:hover:before {
+		color: #fff;
+	}
+	#submenu a:before {
+		content: "/";
+		padding: 0 0.4em;
+	}
+	#submenu li:first-child a:before {
+		content: "";
+	}
+	#submenu li:last-child a {
+		padding-right: 0.6em;
+	}
+	#home-orbit {
+		max-height: 32em !important;
+	}
+	
+	#site-title a {
+		background: url("images/feast-logo-desktop.png") no-repeat top left;
+		margin: 0;
+		width: 194px;
+		height: 200px;
+		position: absolute;
+		top: -30px;
+		left: 0;
+		z-index: 1000;
+	}
+	.container {
+		position: relative;
+		z-index: 500;
+	}
+	#content {
+		padding: 65px 0;
+	}
+	#subhead {
+		width: 100%;
+	}
+	.speaker {
+		padding: 30px 0;
+	}
+	.portrait {
+		float: right;
+		margin: 30px 0;
+		width: 220px;
+	}
+}
+
+/* Neil's Styles */
+/* REVUP */
+
+/*GLOBAL*/
+
+.uppercase{ text-transform: uppercase; }
+.light-b{ color: #4ed8e9; }
+.light-g{ color: #616161; }
+.l-space{ letter-spacing: 1px; }
+
+/*GLOBAL*/
+
+.intro h1{ margin-top: 2.5rem; }
+.intro p{ font-size: 18px; font-weight: lighter; }
+
+#revup-nbc{ background: url("images/revup-banner3.png") no-repeat 0 0; background-size: 486px 134px; width: 485px; height:0; padding-top: 134px; overflow:hidden;}
+
+.revup.banner img{ width: 100%; }
+.revup .white-bg{ 
+    background: rgba(255, 255, 255, 0.85); 
+    position: absolute; 
+    top:0; 
+    width: 100%; 
+    margin: 90px 0; 
+    padding: 35px 0; 
+}
+
+.revup .white-bg p{
+	line-height: 2em;
+	font-size: 15px;
+}
+
+#apply-now{
+	position: absolute;
+	top: -35px;
+	right: 20px;
+	background: #4ed9e9;
+	padding: 12px 15px 0;
+	text-align: center;
+	-webkit-box-shadow:  4px 5px 4px 0px rgba(00, 00, 00, 0.3);
+	box-shadow:  4px 5px 4px 0px rgba(00, 00, 00, 0.3);
+}
+
+#apply-now h3{
+	color: #616161;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 30px;
+	margin: 5px 0;
+}
+
+#apply-now p{
+	color: #fff;
+	line-height: 18px;
+	margin-bottom: 1.;
+}
+
+#apply-now a{
+	background: #fff;
+	color: #616161;
+	display: inline-block;
+	font-family: "league-gothic", sans-serif; 
+	font-weight: 300;
+	font-size: 1.250em;
+	padding: 8px 40px;
+	text-transform: uppercase;
+}
+
+/*Countdown*/
+#countdown{ margin: 5px auto 10px;}
+.countdown_section{
+	float:left;
+	margin-right: 16px;
+	font-family: "proxima-nova",sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: -0.03em;
+}
+
+.countdown_section:last-child{ margin-right: 0; }
+
+.countdown_amount{
+	color: #fff;
+	font-family: "league-gothic", sans-serif; 
+	font-weight: 300;
+	font-size:30px;
+	text-align: center;
+	letter-spacing: 0;
+}
+.aboutrevup {
+	font-weight: bold;
+	margin-right: 2em;
+}
+
+#thunder-grid { 
+	margin: 0; 
+	padding: 0; 
+}
+#thunder-grid li { 
+	margin:0;
+	padding:0;
+	list-style: none;
+	padding: 25px;
+	min-height: 465px;
+	border-bottom: 1px solid #bfbfbf;
+	border-right: 1px solid #bfbfbf;
+}
+
+#thunder-grid li:nth-child(3n+3) {
+	border-right: none;
+}
+
+#thunder-grid li a{
+	color: #4ed8e9;
+}
+
+#thunder-grid li .tagline{
+	color: #616161;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+#thunder-grid li h2{
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 30px;
+	margin: 0 0 10px;
+}
+
+
+
+
+#thunder-grid li p{ color: #616161; margin: 10px 0; font-size:15px; }
+#thunder-grid li p a{ text-transform: uppercase; }
+
+/*Revup Detail*/
+.revup-detail h1{ font-size: 65px; margin-top: 0;}
+.revup-detail .tagline{ display: block; margin-top: 15px; font-size: 15px; }
+.revup.banner{ max-height: 600px; overflow: hidden;}
+
+.revup .date{ display:inline-block; margin: 10px 0;}
+.revup .post-content{
+	-moz-column-count: 2;
+	  -moz-column-gap: 30px;
+	  -moz-column-rule: none;
+	  -webkit-column-count: 2;
+	  -webkit-column-gap: 30px;
+	  -webkit-column-rule: none;
+	column-count: 2;
+	column-gap: 30px;
+	column-rule: none;
+	margin: 20px 0;
+}
+.revup .post-content blockquote{
+	margin: 30px 0;
+	position: relative;
+	border-left:none;
+}
+.revup .post-content blockquote:before{
+	content: '';
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    top: -10px;
+    border-top: 2px solid #4ed8e9;
+}
+
+.revup .post-content blockquote:after {
+        content: '';
+        position: absolute;
+        width: 70%;
+        left: 15%;
+        bottom: -10px;
+        border-bottom: 2px solid #4ed8e9;
+    }
+
+.revup .post-content blockquote p{
+	color: #4ed8e9;
+	text-align: center;
+	font-size: 30px;
+	font-family: "league-gothic", sans-serif; font-weight: 300;
+	text-transform: uppercase;
+}
+
+.revup .post-content blockquote p:before{
+	content: ' " ';
+}
+
+.revup .post-content blockquote p:after{
+	content: ' " ';
+}
+
+/* Custom Thunderclap */
+#thunder{ margin-top: 5%;}
+.thndr_it img{opacity:0;}
+.thndr_it{ background: url( 'images/spreadtheword-btn.jpg') no-repeat 0 0; display:block; height: 45px; }
+.thndr_it:hover{ background-position: 0 -45px; }
+
+.single-finalist .thndr_it{ background: url('images/circle-cta.png') no-repeat 0 0; display:block; height: 251px; width: 252px;}
+.single-finalist .thndr_it:hover{ opacity: 0.8; }
+
+.thndr_it_open{ 
+	background-color: #4ed9e9 !important; 
+	border: none !important;
+	width: 270px !important;
+}
+.thndr_it_open h1{ 
+	font-size: 25px !important;
+	font-family: "league-gothic", sans-serif !important;
+	color: #616161 !important;
+	text-transform: uppercase;
+	text-align: center; 
+}
+
+.thndr_it_open .thndr_message{
+	color: #fff;
+	font-family: "proxima-nova",sans-serif !important;
+	line-height: 18px;
+	border-bottom: 1px solid #fff;
+	border-top: 1px solid #fff;
+	padding: 10px 5px;
+	margin-bottom: 25px !important;
+}
+
+body .thndr_support_fb, body .thndr_support_tw{
+	width: 100% !important;
+	border-radius: 5px !important;
+	background: #fff !important;
+	color: #616161 !important;
+	font-size: 12px !important;
+
+}
+
+.thndr_it_open .thndr_support_fb, .thndr_it_open .thndr_support_tw{
+	font-size:0 !important;
+
+}
+
+.thndr_it_open .thndr_support_fb:after{
+content:"VOTE WITH FACEBOOK";
+font-size:12px;
+}
+
+.thndr_it_open .thndr_support_tw:after{
+content:"VOTE WITH TWITTER";
+font-size:12px;
+}
+
+body .thndr_support_fb:hover, body .thndr_support_tw:hover{
+
+}
+
+.thndr_progress, .thndr_reach, .thndr_time_left{
+	text-transform: uppercase;
+	font-size: 10px !important;
+	color: #fff;
+}
+
+.thndr_progress strong, .thndr_reach strong, .thndr_time_left strong{
+	font-size: 25px !important;
+	font-family: "league-gothic", sans-serif !important;
+	font-weight: 300;
+	color: #616161;
+}
+
+
+body .thndr_it_open.arrow_bottom_left:after,
+body .thndr_it_open.arrow_bottom_left:before {
+  	top: 100%;
+}
+body .thndr_it_open.arrow_bottom_left:after {
+  	border-color: transparent;
+  	border-top-color: #4ed9e9 !important;
+  	border-width: 10px;
+  	margin-left: -10px;
+  	left: 20px;
+}
+body .thndr_it_open.arrow_bottom_left:before {
+  	border-color: transparent;
+  	border-top-color: #4ed9e9 !important;
+  	border-width: 11px;
+  	margin-left: -11px;
+  	left: 20px;
+}
+
+/* Stay Updated */
+#stay-updated{ background: #4ed9e9; padding: 22px 0 10px;}
+#stay-updated input.mce-EMAIL.required.email{ width: 100%; }
+#stay-updated input.button.mc-embedded-subscribe{ background: #f4f5f5; color: #616161; width: 100%; border: none;}
+#stay-updated input.button.mc-embedded-subscribe:hover{ background:#616161; color: #fff; }
+
+/*Rebelmouse*/
+#rebelmouse { background: #f4f5f5; padding: 30px 0; }
+
+/*Clearfix*/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+/*Resonsive Goodness*/
+@media only screen and (max-width: 767px) {
+
+	/*REVUP*/
+	#revup-nbc{
+		text-align:center;
+		background-size: 215px 65px;
+		margin: 0 auto;
+		width: 215px;
+		padding-top: 90px;
+	}
+	.revup .white-bg p{
+		font-size: 11px;
+		text-align: center;
+	}
+
+	.intro{ margin-top: 410px; text-align: center; }
+
+	#apply-now{
+		position: relative;
+		width: 100%;
+		top: 0;
+		right: 0;
+	}
+
+	.single-finalist .white-bg h1{ font-size: 35px; text-align: center;}
+	.single-finalist .tagline{ text-align: center;}
+	.single-finalist #content{ margin-top: 240px; }
+	.single-finalist .intro{ margin-top: 50px; }
+	.single-finalist .thndr_it{ background: url( 'images/spreadtheword-btn.jpg') no-repeat 0 0; display:block; height: 45px; margin:0 auto; }
+	.single-finalist #thunder{ margin-top:0; }
+
+	.revup .post-content{
+		-moz-column-count: 1;
+		  -moz-column-gap: 30px;
+		  -moz-column-rule: none;
+		  -webkit-column-count: 1;
+		  -webkit-column-gap: 30px;
+		  -webkit-column-rule: none;
+		column-count: 1;
+		column-gap: 30px;
+		column-rule: none;
+		margin: 20px 0;
+	}
+	#countdown {
+		width: 90% !important;
+	}
+
+	#thunder-grid li{ border: none;}
+
+}
+
+@media only screen and (min-width: 766px) {
+	.finalist:nth-child(3n+1) {
+		clear: left;
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+	#revup-nbc{
+		background-size: 350px 108px;
+		width: 400px;
+		margin-top: 20px;
+		padding-top: 155px;
+	}
+	#countdown{
+		width: 85%;
+	}
+	.revup.container{
+		margin-top: 190px;
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+	#countdown {
+		width: 70% !important;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	#countdown {
+			width: 65% !important;
+		}
+}
+
+@media only screen and (max-device-width: 640px) and (orientation: portrait)  {
+		#countdown {
+			width: 95% !important;
+		}
+}

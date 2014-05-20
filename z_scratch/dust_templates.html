@@ -1,0 +1,50 @@
+
+
+<script type="text/x-template" id="guests">
+    {#guests}
+    <div class="col-md-6 guest_info">
+              
+              <div class="guest_name clearfix">
+                  <div class="pull-left"><img src="images/twitterAvatar.jpeg"/></div>
+                  <div class="pull-left">
+                    <h4>{fname} {lname}</h4>
+                            <p><a href="http://twitter.com/twitter">@{twitter}</a> <br/>
+                              Company</p>
+                  </div>
+              </div>
+              
+              <div class="guest_question clearfix">
+                <p>Hi, Im {fname} {lname}. I {what}, because {why}.</p>
+
+                <p>{question}</p>
+
+                <p>{location}</p>
+              </div>
+            </div>>
+    </div>
+    {/guests}
+</script>
+
+<script type="text/x-template" id="backCard">
+ {#cards}
+    <div class="cardBack {trait}">
+        <div class="modal-header">
+             <h3 id="myModalLabel">{trait}</h3>
+        </div>
+        <div class="modal-body">
+            <p><strong>{trait}</strong> &middot;  <em>{dictionary.pos}</em></p>
+            <ul>{#dictionary.definition}
+                <li>{.}</li>{/dictionary.definition}
+            </ul>
+            
+            <div class="examples">
+            <p><strong>Examples:</strong></p>
+              <ul>{#examples}
+               <li>{.}</li>{/examples}
+              </ul>
+          </div>
+        </div>
+    </div>
+{/cards}
+    
+</script>
