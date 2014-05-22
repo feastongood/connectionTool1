@@ -36,6 +36,57 @@ header h5, header p {
 	text-align:right;
 }
 
+/* Project Page */
+
+img.cover {
+    display:block;
+    margin:auto;
+}
+
+.container.body {
+	margin-bottom:30px;
+}
+
+.left_col {
+	background: #999999;
+	padding: 10px;
+}
+.avatar {
+	width:60px;
+	height:60px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+.external_links ul {
+	padding: 5px;
+	background: white;
+	margin-top: 10px;
+}
+
+.external_links li {
+	border-bottom: 2px #E4E4E4 solid;
+	list-style: none;
+	margin: 4px 0;
+	padding:4px 0;
+}
+
+.external_links li:last-child {
+	border-bottom: 0px;
+}
+
+.update {
+	background: white;
+	margin-left: 30px;
+	padding: 15px 0;
+	overflow: hidden;
+}
+
+.update button{
+	float:right;
+	margin-right:15px;
+}
 /* Heroine */
 
 .heroContent {
@@ -235,9 +286,7 @@ a.ml_submit {
 	margin-bottom:5px;
 }
 
-.avatar {
-	width: 20%;
-}
+
 /*  Colors
 Grey: #616161
 Teal: #00debc

@@ -3,10 +3,6 @@
     <div class="container">
 
       <div id="subfooter" class="row" role="contentinfo">
-        <div class="col-md-6" id="legal">
-          <!--<p><a href="http://vimeo.com/channels/feastongood">Video</a> | <a href="http://feastongood.tumblr.com/">Blog</a> | <a href="http://feastongood.com/2013/press">Press</a> | <a href="http://feastongood.com/2013/contact">Contact</a> | <a href="http://feastongood.com/2013/about">About</a></p> -->
-          <p>© 2014. The Feast. All rights reserved. <br><a href="http://feastongood.com/2013/terms-of-use">Terms of Use</a>. <a href="http://feastongood.com/2013/privacy-agreement">Privacy Agreement</a>.</p>
-        </div>
         
       <!-- <div class="col-md-4" id="signup">
           <p>JOIN OUR MAILING LIST</p>
@@ -30,6 +26,12 @@
               });
           </script>
         </div>
+
+        <div class="col-md-6" id="legal">
+          <!--<p><a href="http://vimeo.com/channels/feastongood">Video</a> | <a href="http://feastongood.tumblr.com/">Blog</a> | <a href="http://feastongood.com/2013/press">Press</a> | <a href="http://feastongood.com/2013/contact">Contact</a> | <a href="http://feastongood.com/2013/about">About</a></p> -->
+          <p>© 2014. The Feast. All rights reserved. <br><a href="http://feastongood.com/2013/terms-of-use">Terms of Use</a>. <a href="http://feastongood.com/2013/privacy-agreement">Privacy Agreement</a>.</p>
+        </div>
+        
       </div>
     </div>
   </div>
