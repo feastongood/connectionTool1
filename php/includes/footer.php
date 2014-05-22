@@ -21,9 +21,9 @@
             <li><a class="instagram" href="http://instagram.com/feastongood"><span>Instagram</span></a></li>  
           </ul>
           <script type="text/javascript">
-              mixpanel.track_links("#footersocialicons", "click social link", {
+             /* mixpanel.track_links("#footersocialicons", "click social link", {
                   "referrer": document.referrer
-              });
+              }); */
           </script>
         </div>
 

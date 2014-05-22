@@ -1,5 +1,82 @@
+<?php
 
-<?php include_once('php/includes/header.php'); ?>
+     date_default_timezone_set('America/Los_Angeles');
+    /**********************************************************************
+    *  ezSQL initialisation for mySQL
+    */
+
+    // Include ezSQL core
+    include_once "php/libs/shared/ez_sql_core.php";
+
+    // Include ezSQL database specific component
+    include_once "php/libs/ez_sql_mysql.php";
+
+    // Initialise database object and establish a connection
+    // at the same time - db_user / db_password / db_name / db_host
+    $db = new ezSQL_mysql('root','vegas1982','connect.feastongood','127.0.0.1');
+
+    /**********************************************************************/
+
+    //reply count: update manually
+    $q1reply_count = $db->get_var("SELECT count(*) FROM replies WHERE questionID= 1");
+
+    //reply storage
+    $q1replies = $db->get_results("SELECT reply, twitter, dateAdded FROM replies WHERE questionID= 1");
+    $q1_html = '';
+
+    foreach ($q1replies as $reply) {
+      $a_reply = $reply->reply;
+      $tweeter = $reply->twitter;
+      $date = $reply->dateAdded;
+
+      $date_time = strtotime($date);
+      $date = date("F j, Y", $date_time);
+      
+      $reply_br = nl2br($a_reply);
+
+      $q1_html .= "<div class='each_reply'><h5><a href='http://twitter.com/$tweeter'>$tweeter</a> on $date</h5> $reply_br</div>";
+    }
+
+
+    include_once('php/includes/header.php'); 
+
+?>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Got something to share?</h4>
+      </div>
+      <div class="modal-body">
+      <div id="replies" style="display:none;" >
+        <?php echo $q1_html; ?>
+      </div>
+
+      <div id="modal-question"></div>
+        <form class="form-inline" role="form">
+          <textarea id="reply"></textarea>
+           <div class="form-group">
+            <label for="twitter">Your Twitter Name</label>
+            <div class="input-group">
+              <span class="input-group-addon">@</span>
+              <input type="text" class="form-control" id="twitter" name="twitter" placeholder="feastongood">
+            </div>
+          </div>
+          <input type="text" style="display:none;" id="questionID" name="questionID" value=""> <!-- update with question id-->
+          <input type="text" style="display:none;" id="userID" name="userID" value="1"> <!-- update with userID us PHP-->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" id="reply_question" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
 
  <!-- Project Content -->
       <div id="project_header" class="container">
@@ -14,7 +91,7 @@
           <div class="col-md-3" id="follower_count">
             <div class="team_count">
               <h3>1</h3>
-              <p>Team members</p>
+              <p>Team member</p>
             </div>
             <div class="helper_count">
               <h3>28</h3>
@@ -57,6 +134,8 @@
               </div>
             </div>
 
+
+
          <!-- Updates and Asks -->
             <div class="col-md-9">
               <div class="row">
@@ -70,8 +149,11 @@
 
                     <p>posted by Chris Chavez<br/>
                     4/28/2014</p>
+
+                    <!-- reply count -->
+                    <a class="replies" data-toggle="modal" data-target="#myModal"><?php echo $q1reply_count; ?> Replies</a>
                   </div>
-                  <div class="col-md-5"><!-- question -->
+                  <div class="col-md-5 questions"><!-- question -->
                   <h5>Questions</h5>
                   <p>I want to be bold, because I know or group is bold.</p>
 
@@ -79,7 +161,9 @@
 
                   <p>2. Or, if you had the luxury of not having to worry about sustainability, what revenue // payment experiments would you try, if you had two buildings in mid-town Manhattan to play with?</p>  
                   </div>
-                  <button>Answer</button>
+
+                  <button class="btn btn-primary btn-lg reply" rel="1" data-toggle="modal" data-target="#myModal">Reply</button>
+
                 </div><!--/update-->
               </div>
             </div>
@@ -89,5 +173,55 @@
   <!-- /Main Content -->
 
 <?php include_once('php/includes/footer.php'); ?>
+  <script>
+    $(function(){
+        $('button.reply').click(function(){
+          //clear reset form
+          $('#modal-question').html('');
+          $('#questionID').val('');
+          $('#reply').val(''),
+          $("form").show();
+          $("#reply_question").show();
+          
+          //get new content
+          var question_txt = $(this).siblings('.questions').html();
+          var question_id = $(this).attr('rel');
+          
+          //add new content
+          $('#modal-question').html(question_txt);
+          $('#questionID').val(question_id);
+        });
+
+        $('a.replies').click(function(){
+          //set modal
+          $('#replies').show(),
+          $("form").hide();
+          $("#reply_question").hide();
+          $("#myModalLabel").html('A reply or two');
+        });
+
+        $('#reply_question').click(function() {
+          
+          $.ajax({
+              type : 'POST',
+              url : 'php/post_reply.php',           
+              data: {
+                  reply : $('#reply').val(),
+                  questionID   : $('#questionID').val(),
+                  userID  : $('#userID').val(),
+                  twitter : $('#twitter').val()
+              },
+              success:function (data) {
+                  $("#modal-question").html(data);
+                  $("form").hide();
+                  $("#reply_question").hide();
+              }          
+          });     
+        });
+
+    });
+  </script>
+
+
   </body>
   </html>
