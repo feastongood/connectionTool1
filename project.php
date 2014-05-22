@@ -1,4 +1,5 @@
-<? include_once('php/includes/header.php'); ?>
+
+<?php include_once('php/includes/header.php'); ?>
 
  <!-- Project Content -->
       <div id="project_header" class="container">
@@ -87,6 +88,6 @@
       </div> <!-- /container -->
   <!-- /Main Content -->
 
-<? include_once('php/includes/footer.php'); ?>
+<?php include_once('php/includes/footer.php'); ?>
   </body>
   </html>
