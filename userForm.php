@@ -1,4 +1,4 @@
-<? include_once('php/includes/header.php'); ?>
+<?php include_once('php/includes/header.php'); ?>
 
  <!-- Main Content -->
       <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -122,14 +122,11 @@
           </div>
 
         </div>
-      
-
-
     </div>
 </form>
   </div> <!-- /container -->
   <!-- /Main Content -->
 
-<? include_once('php/includes/footer.php'); ?>
+<?php include_once('php/includes/footer.php'); ?>
   </body>
   </html>

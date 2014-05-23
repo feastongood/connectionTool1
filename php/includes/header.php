@@ -1,3 +1,23 @@
+<?php      
+
+    date_default_timezone_set('America/Los_Angeles');
+    /**********************************************************************
+    *  ezSQL initialisation for mySQL
+    */
+
+    // Include ezSQL core
+    include_once "php/libs/shared/ez_sql_core.php";
+
+    // Include ezSQL database specific component
+    include_once "php/libs/ez_sql_mysql.php";
+
+    // Initialise database object and establish a connection
+    // at the same time - db_user / db_password / db_name / db_host
+    $db = new ezSQL_mysql('root','vegas1982','connect.feastongood','127.0.0.1');
+
+    /**********************************************************************/
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
