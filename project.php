@@ -18,10 +18,10 @@
     /**********************************************************************/
 
     //reply count: update manually
-    $q1reply_count = $db->get_var("SELECT count(*) FROM replies WHERE questionID= 1");
+    $q1reply_count = $db->get_var("SELECT count(*) FROM replies WHERE questionID=1 and display=1");
 
     //reply storage
-    $q1replies = $db->get_results("SELECT reply, twitter, dateAdded FROM replies WHERE questionID= 1");
+    $q1replies = $db->get_results("SELECT reply, twitter, dateAdded FROM replies WHERE questionID=1 and display=1");
     $q1_html = '';
 
     foreach ($q1replies as $reply) {
