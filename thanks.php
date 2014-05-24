@@ -22,19 +22,19 @@
 
     $datetime = strtotime($event->date);
     $mysqldate = date("M d, Y", $datetime);
-include_once('php/includes/header.php'); ?>
+
+    include_once('php/includes/header.php');
 ?>
- 
 
 
  <!-- Main Content -->
       <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div id="heroine" class="jumbotron" style="height:500px;">
+      <div class="jumbotron" style="height:500px; background: #E4E4E4;">
         <div class="container">
 
           <div class="heroContent col-md-8 col-md-offset-2">
             <h1 style="font-size: 120px; color:#00debc;">Thanks!</h1>
-            <p>Watch your inbox! <br/>We'll drop you a line we've got everybody's information together.</p>
+            <p>Now that you're signed up, head on over to <br/><a href="index.php" onClick="mixpanel.track("Go to Project Page");">New York Rising's project page</a> to see their latest update.</p>
           </div>
 
         </div>
@@ -46,7 +46,8 @@ include_once('php/includes/header.php'); ?>
      </div> <!-- /container -->
   <!-- /Main Content -->
 
-<? include_once('php/includes/footer.php'); ?>
+<?php include_once('php/includes/footer.php'); ?>
+<script>mixpanel.track("Thanks page");</script>
 
   </body>
   </html>

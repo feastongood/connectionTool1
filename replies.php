@@ -11,6 +11,13 @@
     //reply storage
     $replies = $db->get_results("SELECT id, reply, twitter, dateAdded FROM replies WHERE questionID=1 and display=1");
 
+
+ // $date = $reply->dateAdded;
+                    // $date_time = strtotime($date);
+                    // $date = date("F j, Y", $date_time);
+                    
+                    // $a_reply = $reply->reply;
+                    // $reply_br = nl2br($a_reply); 
 ?>
 
 <link href="css/button.css" rel="stylesheet">

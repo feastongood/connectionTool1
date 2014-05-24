@@ -119,8 +119,6 @@
               </div>
             </div>
 
-
-
          <!-- Updates and Asks -->
             <div class="col-md-9">
               <div class="row">
@@ -136,7 +134,7 @@
                     4/28/2014</p>
 
                     <!-- reply count -->
-                    <a class="replies" data-toggle="modal" data-target="#myModal"><?php echo $q1reply_count; ?> Replies</a>
+                    <a class="replies" data-toggle="modal" data-target="#myModal" onClick="mixpanel.track("View replies modal opened");"><?php echo $q1reply_count; ?> Replies</a>
                   </div>
                   <div class="col-md-5 questions"><!-- question -->
                   <h5>Questions</h5>
@@ -147,7 +145,7 @@
                   <p>2. Or, if you had the luxury of not having to worry about sustainability, what revenue // payment experiments would you try, if you had two buildings in mid-town Manhattan to play with?</p>  
                   </div>
 
-                  <button class="btn btn-primary btn-lg reply" rel="1" data-toggle="modal" data-target="#myModal">Reply</button>
+                  <button class="btn btn-primary btn-lg reply" rel="1" data-toggle="modal" onClick="mixpanel.track("Post reply modal opened");" data-target="#myModal">Reply</button>
 
                 </div><!--/update-->
               </div>
@@ -158,54 +156,7 @@
   <!-- /Main Content -->
 
 <?php include_once('php/includes/footer.php'); ?>
-  <script>
-    $(function(){
-        $('button.reply').click(function(){
-          //clear reset form
-          $('#modal-question').html('');
-          $('#questionID').val('');
-          $('#reply').val(''),
-          $("form").show();
-          $("#reply_question").show();
-          
-          //get new content
-          var question_txt = $(this).siblings('.questions').html();
-          var question_id = $(this).attr('rel');
-          
-          //add new content
-          $('#modal-question').html(question_txt);
-          $('#questionID').val(question_id);
-        });
-
-        $('a.replies').click(function(){
-          //set modal
-          $('#replies').show(),
-          $("form").hide();
-          $("#reply_question").hide();
-          $("#myModalLabel").html('A reply or two');
-        });
-
-        $('#reply_question').click(function() {
-          
-          $.ajax({
-              type : 'POST',
-              url : 'php/post_reply.php',           
-              data: {
-                  reply : $('#reply').val(),
-                  questionID   : $('#questionID').val(),
-                  userID  : $('#userID').val(),
-                  twitter : $('#twitter').val()
-              },
-              success:function (data) {
-                  $("#modal-question").html(data);
-                  $("form").hide();
-                  $("#reply_question").hide();
-              }          
-          });     
-        });
-
-    });
-  </script>
+<script>mixpanel.track("Project page");</script>
 
 
   </body>

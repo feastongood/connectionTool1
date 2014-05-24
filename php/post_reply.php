@@ -1,5 +1,8 @@
 <?php
 
+  //config
+  include_once("config.php");
+
     /**********************************************************************
     *  ezSQL initialisation for mySQL
     */
@@ -12,7 +15,7 @@
 
     // Initialise database object and establish a connection
     // at the same time - db_user / db_password / db_name / db_host
-    $db = new ezSQL_mysql('root','vegas1982','connect.feastongood','127.0.0.1');
+    $db = new ezSQL_mysql($DB_USERNAME,$DB_PASSWORD,$DB_DATABASE,$DB_HOST);
 
     /**********************************************************************/
 
