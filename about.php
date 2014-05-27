@@ -10,14 +10,23 @@
 
           <div class="col-md-8">
               <h2>About the Connection Tool</h2>
-              <h5>Prototype 2</h5>
+              
+<p><strong>Whats going on here?</strong><br/>
+This is the second prototype for a project currently named The Feast Connection Tool. We've brought together over 20 inspiring individuals around the work of Gita Nandan and New York Rising. Each week, Gita posts an update of the goings on at New York Rising. These updates are sent out to the community, who have an opportunity to contribute their knowledge and networks to help New York Rising succeed.</p>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ante eros, auctor a placerat et, luctus eget quam. Suspendisse aliquam velit ut purus iaculis, in ultricies dui sagittis. Aenean sollicitudin arcu ante, id scelerisque felis pretium rhoncus. Pellentesque sed ligula quam. Integer sollicitudin nibh sit amet purus pretium, ac dignissim purus ullamcorper. Donec eu libero at quam gravida eleifend. In scelerisque pharetra sapien in sodales. Praesent non dui urna. Sed nec convallis sem.</p>
+<p>The contributors to this prototype all dined together at The Feast NYC's Adapt dinner, hosted at Meatball Shop on May 21st. This test will run until June 18th, 2014.</p>
 
-              <p>Curabitur sit amet mauris id arcu vehicula scelerisque vel a nunc. Fusce vel tortor bibendum, interdum orci at, tincidunt lacus. Nam non malesuada dui, quis venenatis augue. Duis convallis tortor ultricies scelerisque aliquet. Suspendisse potenti. Nunc lacinia sollicitudin urna eu sollicitudin. Maecenas nec est eget lorem convallis pharetra. Suspendisse potenti. Sed gravida quis eros mollis malesuada. Aenean at ipsum id mauris volutpat pellentesque. Morbi dapibus et neque et tempor. Proin viverra facilisis fringilla. Quisque risus mauris, tincidunt id congue porta, consectetur nec sem. Nulla posuere lacus sem, eu feugiat diam mattis sit amet. Proin tortor nisi, facilisis in dictum sit amet, mattis eu mi. Donec posuere lobortis varius.</p>
+<p>&nbsp; </p>
+<p><strong>About The Feast</strong><br/>
+The Feast connects creatives, entrepreneurs and influencers around doing good. By gathering these communities in participatory events, we spark cross-disciplinary partnerships, relationships and collaborations that have lasting social impact.</p>
 
-              <p>Donec id lectus convallis sem aliquet egestas. In vel viverra tellus. Aenean rutrum felis non ligula dictum, ut auctor libero fringilla. Praesent lacus est, fermentum a pharetra quis, rhoncus vel est. Duis id sapien eu tortor faucibus fringilla a ac nisi. Nullam ut massa vitae elit volutpat rhoncus sit amet at mi. In faucibus, urna sit amet faucibus imperdiet, dui ante consequat neque, ac posuere nunc sapien non velit.</p>
-          </div>
+<p><strong>About The Tool</strong><br/>
+<p>We're building a digital platform to help connect people in our community to the projects they've discovered through our events. The tool will provide a place where they can follow and contribute to the conversations around a projects long after a particular Feast event is over. </p>
+
+<p>Our goal is to empower all members of The Feast community to share their knowledge, skills, and networks with the extraordinary projects and companies that are working to make the world a better place. For the entrepreneurs among us, our goal is to create a space of continued support, access to resources, and continued engagement with those invested in the their work. </p>
+
+<p>For more information, please email Tash Wong at <a href="mailto:tash@feastongood.com">tash@feastongood.com</a>.</p>
+              </div>
           
           <div class="col-md-4">
             
