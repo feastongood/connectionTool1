@@ -45,15 +45,25 @@
       <div id="followers" class="container">
         <div class="row">
 
-          <div class="follower col-md-6">
-            <div class="follower_wrap round">
-                <div class="follower_left">
-                <img src="images/project/gita.png" alt="Gita Nandan" title="Gita Nandan"/><br/>
+<?php 
+  
+  //get users
+  $users = $db->get_results("SELECT fname, lname, avatar, city, bio, url, twitter, linkedin, instagram, what, why FROM users");
+
+  //parse through users
+  foreach ($users as $user){ ?>
+ <img src='images/project/gita.png' alt='$user->fname $user->lname' title='$user->fname'/><br/>
+  } ?>
+
+      <div class='follower col-md-6'>
+            <div class='follower_wrap round'>
+                <div class='follower_left'>
+                <img src='images/project/gita.png' alt='$user->fname $user->lname' title='$user->fname'/><br/>
                <!-- <h5><a class='follower_replies' data-toggle='modal' data-target='#myModal' onClick='mixpanel.track('View replies modal opened');'>2 Replies</a></h5> -->
                 
               </div>
-              <div class="follower_right">
-                <h2>Chris Cannon</h2>
+  <div class="follower_right">
+                <h2><?php echo $user->fname;?> <?php echo $user->lname;?></h2>
                 <h5>New York City</h5>
                 <p>Community @primeproduce. Partnerships @catchafire. Chair @ynpnnyc. Love social-info-tech-design.</p>
                 <ul>
@@ -65,6 +75,13 @@
               </div>
             </div>
           </div>
+ 
+
+  //print out html
+
+  //loop through social media links, display the ones that are populated
+?>
+
 
           <div class="follower col-md-6">
             <div class="follower_wrap round">
@@ -87,7 +104,7 @@
             </div>
           </div>
 
-          <div class="follower col-md-6">
+<div class="follower col-md-6">
             <div class="follower_wrap round">
                 <div class="follower_left">
                 <img src="images/project/gita.png" alt="Gita Nandan" title="Gita Nandan"/><br/>
