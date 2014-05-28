@@ -33,12 +33,13 @@ $instagram = $_POST["instagram"];
 $what = addslashes($_POST["what"]);
 $why = addslashes($_POST["why"]);
 $avatar = $_POST["avatar"];
+$url = $_POST["url"];
 
 $avatarURL = str_replace("_normal", "_bigger", $avatar);
 
 
 
-if ($db->query("INSERT INTO users (id, fname, lname, email, city, twitter, bio, linkedin, facebook, instagram, what, why, avatar) VALUES (NULL, '".$fname."','".$lname."','".$email."', '".$city."','".$twitter."','".$bio."', '".$linkedin."','".$facebook."','".$instagram."','".$what."','".$why."','".$avatarURL."')")){
+if ($db->query("INSERT INTO users (id, fname, lname, email, city, twitter, bio, url, linkedin, facebook, instagram, what, why, avatar) VALUES (NULL, '".$fname."','".$lname."','".$email."', '".$city."','".$twitter."','".$bio."', '".$url."', '".$linkedin."','".$facebook."','".$instagram."','".$what."','".$why."','".$avatarURL."')")){
 
     header( $thanks ) ;
 }

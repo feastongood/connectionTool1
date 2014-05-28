@@ -3,26 +3,35 @@
     $title = 'New York Rising - The Feast Connection Tool';
     include_once('php/includes/header.php'); 
 
-    //reply count: update manually
-    $q1reply_count = $db->get_var("SELECT count(*) FROM replies WHERE questionID=1 and display=1");
+    //user count
+    $userCount = $db->get_var("SELECT count(*) FROM users");
 
     //reply storage
-    $q1replies = $db->get_results("SELECT reply, twitter, dateAdded FROM replies WHERE questionID=1 and display=1");
+    $q1replies = $db->get_results("SELECT reply, twitter, dateAdded FROM replies WHERE questionID=2 and display=1");
     $q1_html = '';
 
-    foreach ($q1replies as $reply) {
-      $a_reply = $reply->reply;
-      $tweeter = $reply->twitter;
-      $date = $reply->dateAdded;
+    if (count($q1replies) > 0 ){
+      foreach ($q1replies as $reply) {
+        $a_reply = $reply->reply;
+        $tweeter = $reply->twitter;
+        $date = $reply->dateAdded;
 
-      $date_time = strtotime($date);
-      $date = date("F j, Y", $date_time);
-      
-      $reply_br = nl2br($a_reply);
+        $date_time = strtotime($date);
+        $date = date("F j, Y", $date_time);
+        
+        $reply_br = nl2br($a_reply);
 
-      $q1_html .= "<div class='each_reply'><h5><a href='http://twitter.com/$tweeter'>$tweeter</a> on $date</h5> $reply_br</div>";
+        $q1_html .= "<div class='each_reply'><h5><a href='http://twitter.com/$tweeter'>$tweeter</a> on $date</h5> $reply_br</div>";
+      }
+
+      //reply count: update manually
+      $q1reply_count = $db->get_var("SELECT count(*) FROM replies WHERE questionID=2 and display=1");
+      $replyLink = "<a class='replies' data-toggle='modal' data-target='#myModal' onClick='mixpanel.track('View replies modal opened');>$q1reply_count Replies</a>";
+    
+    } else {
+    
+      $replyLink = '';
     }
-
 
     
 
@@ -52,8 +61,8 @@
               <input type="text" class="form-control" id="twitter" name="twitter" placeholder="feastongood">
             </div>
           </div>
-          <input type="text" style="display:none;" id="questionID" name="questionID" value=""> <!-- update with question id-->
-          <input type="text" style="display:none;" id="userID" name="userID" value="1"> <!-- update with userID us PHP-->
+          <input type="text" style="display:none;" id="questionID" name="questionID" value="2"> <!-- update with question id-->
+          <input type="text" style="display:none;" id="userID" name="userID" value=""> <!-- update with userID us PHP-->
         </form>
       </div>
       <div class="modal-footer">
@@ -80,8 +89,8 @@
               <p>Team member</p>
             </div>
             <div class="helper_count">
-              <h3>28</h3>
-              <p>Helpers and followers</p>
+              <h3><?php echo $userCount; ?></h3>
+              <p>Helpers and Followers</p>
             </div>
           </div>
 
@@ -118,7 +127,7 @@
 
               <div class="helpers"></div>
               <div class="followers">
-                <h5>28 Followers</h5>
+                <h5><?php echo $userCount; ?> Followers</h5>
               </div>
             </div>
 
@@ -127,32 +136,24 @@
               <div class="row">
                 <div class="update round">
                   <div class="col-md-7"><!-- wins and rocks -->
-                  <h5>Updates</h5>
-
-                  <p> Gita's next update is coming soon! <br/>We'll email you once it arrives.</p>
-                  <!--<h5>Wins</h5>
-                    <p>Construction insurance issue resolved with our GC.  Our buildings were originally constructed as one lot in 1919. I'll let your imagination run wild from there.  </p>
+                    <h5>Wins</h5>
+                    <p>The committee is clearly keeping up the energy to keep on working even after the official end of the process, which is really inspirational volunteering activism.</p>
 
                     <h5>Rocks</h5>
-                    <p>We are challenging ourselves to re-think conventional payment options.  Pay-per-minute is one inspiration. We may settle into a revenue model that is super recognizable, and we're okay with that, as long as we selected it with intention.  </p>
+                    <p>As we move into the implementation phase there has been a bit of a communication breakdown from the top-down, and feeling a bit in the dark.  </p>
 
-                    <p>posted by Chris Chavez<br/>
-                    4/28/2014</p>
-
+                    <p>posted by Gita Nandan<br/>
+                    5/28/2014</p>
                     
-                    <a class="replies" data-toggle="modal" data-target="#myModal" onClick="mixpanel.track("View replies modal opened");"><?php echo $q1reply_count; ?> Replies</a> -->
+                    <?php echo $replyLink; ?>
                   </div>
                   <div class="col-md-5 questions"><!-- question -->
-                  <!--<h5>Questions</h5>
-                  <p>I want to be bold, because I know or group is bold.</p>
-
-                  <p>1. What radical revenue models inspire you?  </p>
-
-                  <p>2. Or, if you had the luxury of not having to worry about sustainability, what revenue // payment experiments would you try, if you had two buildings in mid-town Manhattan to play with?</p>  -->
+                  <h5>Questions</h5>
+                  <p>If you had/have a vision of how to transform your community that requires multiple governmental agencies, what out of the box approaches would you take?</p>
                   </div>
 
-                  <!-- <button class="btn btn-primary btn-lg reply" rel="1" data-toggle="modal" onClick="mixpanel.track("Post reply modal opened");" data-target="#myModal">Reply</button>
-                  -->
+                  <button class="btn btn-primary btn-lg reply" rel="1" data-toggle="modal" onClick="mixpanel.track("Post reply modal opened");" data-target="#myModal">Reply</button>
+                 
                 </div><!--/update-->
               </div>
             </div>
