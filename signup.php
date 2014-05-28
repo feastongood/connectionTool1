@@ -132,7 +132,7 @@ include_once('php/includes/header.php'); ?>
       <div class="col-md-4">
 
         <div class="secondary">
-        <p>No one can save the world by themselves.</p><p>We're creating a digital space for social innovators and the people who support them to come together help each other do great work. </p> <p>So glad you're hear, thanks for joining us.</p>
+        <p>No one can save the world by themselves.</p><p>We're creating a digital space for social innovators and the people who support them to come together help each other do great work. </p> <p>So glad you're here, thanks for joining us.</p>
         </div>
       </div>
       

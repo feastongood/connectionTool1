@@ -7,5 +7,6 @@ $DB_DATABASE = 'connect_feastongood';
 $DB_HOST = 'mysql.thinkbiggermakebetter.com';
 
 $title = 'The Feast Connection Tool';
+$thanks = 'Location: http://connect.feastongood.com/thanks.php';
 
 ?>

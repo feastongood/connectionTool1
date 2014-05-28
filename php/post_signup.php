@@ -40,7 +40,7 @@ $avatarURL = str_replace("_normal", "_bigger", $avatar);
 
 if ($db->query("INSERT INTO users (id, fname, lname, email, city, twitter, bio, linkedin, facebook, instagram, what, why, avatar) VALUES (NULL, '".$fname."','".$lname."','".$email."', '".$city."','".$twitter."','".$bio."', '".$linkedin."','".$facebook."','".$instagram."','".$what."','".$why."','".$avatarURL."')")){
 
-    header( 'Location: http://connection.feastongood.local/thanks.php' ) ;
+    header( $thanks ) ;
 }
 
 
