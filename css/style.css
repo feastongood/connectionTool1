@@ -133,6 +133,37 @@ img.cover {
 	border-radius: 5px;
 }
 
+/* Followers */
+
+.follower_wrap {
+	background: white;
+	padding: 15px;
+	margin-bottom:30px;
+	overflow:hidden;
+}
+.follower_wrap ul li{
+	display: inline;
+	list-style: none;
+	margin-right: 3px;
+}
+.follower_left {
+	width:30%;
+	float:left;
+}
+
+.follower_right {
+	width:65%;
+	float:right;
+}
+
+.follower_right h2, .follower_right h5 {
+	margin:0;
+	padding: 0;
+}
+
+.follower_right h5 {
+	margin-bottom:10px;
+}
 
 
 /* ======= From Guestbook, don't know if still needed...but probably for form page ===== */

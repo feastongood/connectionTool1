@@ -26,7 +26,7 @@
 
       //reply count: update manually
       $q1reply_count = $db->get_var("SELECT count(*) FROM replies WHERE questionID=2 and display=1");
-      $replyLink = "<a class='replies' data-toggle='modal' data-target='#myModal' onClick='mixpanel.track('View replies modal opened');>$q1reply_count Replies</a>";
+      $replyLink = "<a class='replies' data-toggle='modal' data-target='#myModal' onClick='mixpanel.track('View replies modal opened');'>$q1reply_count Replies</a>";
     
     } else {
     
