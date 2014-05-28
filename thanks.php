@@ -12,7 +12,8 @@
 
           <div class="heroContent col-md-8 col-md-offset-2">
             <h1 style="font-size: 120px; color:#00debc;">Thanks!</h1>
-            <p>Now that you're signed up, head on over to <br/><a href="index.php" onClick="mixpanel.track("Go to Project Page");">New York Rising's project page</a> to see their latest update.</p>
+            <p>Now you're all signed up and following New York Rising.<br/>
+            Head on over to their <a href="index.php" onClick="mixpanel.track("Go to Project Page");">project page</a> to see Gita's latest update.</p>
           </div>
 
         </div>
