@@ -1,9 +1,28 @@
 /* Override styling for Connection Tool, by TW */
 
+h1, h2, h3, h4, h5, h6 { font-family: "proxima-nova", sans-serif; font-weight: 700; color: #616161; }
+
 body {
 	color: #616161;
 	background: #E4E4E4;
 }
+
+.btn-primary, .btn-primary, .btn-primary, .btn-primary {
+color: #fff;
+background-color: #ed117d;
+border-color: #ed117d;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+color: #fff;
+background-color: #00debc;
+border-color: #00debc;
+}
+
+a {
+color: #512150;
+}
+
 
 /* Header + Footer */
 
@@ -36,8 +55,9 @@ header h5, header p {
 	text-align:right;
 }
 
-#sub-nav { /* use when buttons are hidden */
+.nav-bar { /* use when buttons are hidden */
 	margin-top: 60px;
+	float:left;
 }
 
 /* Project Page */
@@ -51,9 +71,14 @@ img.cover {
 	margin-bottom:30px;
 }
 
+#project_header {
+	margin-bottom: 30px;
+}
+
 .left_col {
-	background: #999999;
-	padding: 10px;
+	background: #00debc;
+	padding: 15px;
+	margin-bottom: 60px;
 }
 .avatar {
 	width:60px;
@@ -63,6 +88,9 @@ img.cover {
 	border-radius: 30px;
 }
 
+.external_links {
+	margin: 5px 0;
+}
 .external_links ul {
 	padding: 5px;
 	background: white;
@@ -85,6 +113,7 @@ img.cover {
 	margin-left: 30px;
 	padding: 15px 0;
 	overflow: hidden;
+	min-height: 350px;
 }
 
 .update button{
@@ -92,11 +121,17 @@ img.cover {
 	margin-right:15px;
 }
 
+
 /* About */
 #about {
 	margin-bottom: 50px;
 }
 
+.round {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
 
 
 

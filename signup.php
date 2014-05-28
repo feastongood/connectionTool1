@@ -1,4 +1,7 @@
-<?php include_once('php/includes/header.php'); ?>
+<?php 
+    include_once('php/config.php'); 
+$title = 'Signup - The Feast Connection Tool';
+include_once('php/includes/header.php'); ?>
 
  <!-- Main Content -->
       <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -129,7 +132,7 @@
       <div class="col-md-4">
 
         <div class="secondary">
-        <p>No one can save the world by themselves.</p><p> We're creating a digital space for social innovators and the people who support them to come together help each other do great work. </p> <p>We're so glad you're hear!</p>
+        <p>No one can save the world by themselves.</p><p>We're creating a digital space for social innovators and the people who support them to come together help each other do great work. </p> <p>So glad you're hear, thanks for joining us.</p>
         </div>
       </div>
       

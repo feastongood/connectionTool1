@@ -1,7 +1,7 @@
 <?php      
 
   //config
-  include_once("php/config.php");
+  //include_once("php/config.php"); included on page level to deal with Title updates
 
     date_default_timezone_set('America/Los_Angeles');
     /**********************************************************************
@@ -28,11 +28,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="The Feast Connection Tool">
+  <meta name="author" content="The Feast, Tash Wong">
   <link rel="shortcut icon" href="assets/ico/favicon.ico">
 
-  <title>//Project Name</title>
+  <title><?php echo $title; ?></title>
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -90,9 +90,14 @@ mixpanel.init("6acbd1ffcd22d6cb19ded5a105b02ba9");</script><!-- end Mixpanel -->
               <li><a href=""><img src="images/icons/attendees.png" alt="Everyone"></a></li>
               <li><a href=""><img src="images/icons/user.png" alt="Your Profile"></a></li>
             </ul>-->
-            <div id="sub-nav"><a onClick="mixpanel.track("Nav: Project Page");" href="index.php">New York Rising</a>  |  
-            <a href="about.php" onClick="mixpanel.track("Nav: About Page");">About</a>  |  
-            <a href="#" id="nav_question" onClick="mixpanel.track("Nav: Question Modal");" data-toggle="modal" data-target="#questionModal">Questions?</a></div>
+
+              <ul class="nav-bar">
+                <li><a onClick="mixpanel.track("Nav: Project Page");" href="index.php">New York Rising</a></li>
+                <li><a href="about.php" onClick="mixpanel.track("Nav: About Page");">About</a> </li>
+                <li><a href="#" id="nav_question" onClick="mixpanel.track("Nav: Question Modal");" data-toggle="modal" data-target="#questionModal">Questions?</a></li>
+              </ul>
+
+           
           </div>
         </div>
 

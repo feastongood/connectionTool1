@@ -25,8 +25,11 @@ body.page-template-default,
 body.page-template-feast-speakers-page-php {
 	background: #fff;
 }
-h1, h2, h3, h4, h5, h6 { font-family: "league-gothic", sans-serif; font-weight: 300; letter-spacing: 0.03em; text-transform: uppercase; color: #616161; }
+/*h1, h2, h3, h4, h5, h6 { font-family: "proxima-nova", sans-serif; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: #616161; } 
+superceeded in TW's style.css */
+
 a { color: #ed117d; }
+
 #top {
 	z-index: 1000;
 }

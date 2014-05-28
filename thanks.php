@@ -1,28 +1,6 @@
 <?php
- date_default_timezone_set('America/Los_Angeles');
-    /**********************************************************************
-    *  ezSQL initialisation for mySQL
-    */
-
-    // Include ezSQL core
-    include_once "php/libs/shared/ez_sql_core.php";
-
-    // Include ezSQL database specific component
-    include_once "php/libs/ez_sql_mysql.php";
-
-    // Initialise database object and establish a connection
-    // at the same time - db_user / db_password / db_name / db_host
-    $db = new ezSQL_mysql('db70126_guestb','alldaylong','db70126_guestbook','internal-db.s70126.gridserver.com');
-
-    /***********************************************************************/
-
-
-    $event = $db->get_row("SELECT * FROM Events WHERE id = 2");
-
-
-    $datetime = strtotime($event->date);
-    $mysqldate = date("M d, Y", $datetime);
-
+    include_once('php/config.php'); 
+    $title = 'Thanks - The Feast Connection Tool';
     include_once('php/includes/header.php');
 ?>
 

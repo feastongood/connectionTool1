@@ -1,5 +1,6 @@
 <?php
-
+    include_once('php/config.php'); 
+    $title = 'Replies - The Feast Connection Tool';
     include_once('php/includes/header.php'); 
 
     //question id - update manually

@@ -1,5 +1,6 @@
 <?php
-
+    include_once('php/config.php'); 
+    $title = 'New York Rising - The Feast Connection Tool';
     include_once('php/includes/header.php'); 
 
     //reply count: update manually
@@ -99,32 +100,37 @@
          <div class="row">
 
          <!-- Left Column -->
-            <div class="col-md-3 left_col">
+            <div class="col-md-3 left_col round">
               <div class="team">
               <h5>Team</h5>
                 <img class="avatar" src="images/project/gita.png" title="Gita Nandan" alt="Gita Nandan"/>
+                Gita Nandan
               </div>
               <!-- follow button -->
               <div class="external_links">
                 <ul>
-                  <li><img src="images/icons/link.png"/><a href="http://stormrecovery.ny.gov/community-reconstruction-program" target="_blank">New York Rising</a></li>
-                  <li><img src="images/icons/fb.png"/><a href="https://www.facebook.com/NYStormRecovery" target="_blank">Facebook</a></li>
-                  <li><img src="images/icons/twitter.png"/><a href="https://www.twitter.com/NYStormRecovery" target="_blank">Twitter</a></li>
+                  <li><img src="images/icons/link.png"/> <a href="http://stormrecovery.ny.gov/community-reconstruction-program" target="_blank">New York Rising</a></li>
+                  <li><img src="images/icons/link.png"/> <a href="http://redhookcrp.wordpress.com" target="_blank">Red Hook CRP</a></li>
+                  <li><img src="images/icons/fb.png"/> <a href="https://www.facebook.com/NYStormRecovery" target="_blank">Facebook</a></li>
+                  <li><img src="images/icons/twitter.png"/> <a href="https://www.twitter.com/NYStormRecovery" target="_blank">Twitter</a></li>
                 </ul>
               </div>
 
               <div class="helpers"></div>
               <div class="followers">
-                <a href="attendees.php">28 Followers</a>
+                <h5>28 Followers</h5>
               </div>
             </div>
 
          <!-- Updates and Asks -->
             <div class="col-md-9">
               <div class="row">
-                <div class="update">
+                <div class="update round">
                   <div class="col-md-7"><!-- wins and rocks -->
-                  <h5>Wins</h5>
+                  <h5>Updates</h5>
+
+                  <p> Gita's next update is coming soon! <br/>We'll email you once it arrives.</p>
+                  <!--<h5>Wins</h5>
                     <p>Construction insurance issue resolved with our GC.  Our buildings were originally constructed as one lot in 1919. I'll let your imagination run wild from there.  </p>
 
                     <h5>Rocks</h5>
@@ -133,20 +139,20 @@
                     <p>posted by Chris Chavez<br/>
                     4/28/2014</p>
 
-                    <!-- reply count -->
-                    <a class="replies" data-toggle="modal" data-target="#myModal" onClick="mixpanel.track("View replies modal opened");"><?php echo $q1reply_count; ?> Replies</a>
+                    
+                    <a class="replies" data-toggle="modal" data-target="#myModal" onClick="mixpanel.track("View replies modal opened");"><?php echo $q1reply_count; ?> Replies</a> -->
                   </div>
                   <div class="col-md-5 questions"><!-- question -->
-                  <h5>Questions</h5>
+                  <!--<h5>Questions</h5>
                   <p>I want to be bold, because I know or group is bold.</p>
 
                   <p>1. What radical revenue models inspire you?  </p>
 
-                  <p>2. Or, if you had the luxury of not having to worry about sustainability, what revenue // payment experiments would you try, if you had two buildings in mid-town Manhattan to play with?</p>  
+                  <p>2. Or, if you had the luxury of not having to worry about sustainability, what revenue // payment experiments would you try, if you had two buildings in mid-town Manhattan to play with?</p>  -->
                   </div>
 
-                  <button class="btn btn-primary btn-lg reply" rel="1" data-toggle="modal" onClick="mixpanel.track("Post reply modal opened");" data-target="#myModal">Reply</button>
-
+                  <!-- <button class="btn btn-primary btn-lg reply" rel="1" data-toggle="modal" onClick="mixpanel.track("Post reply modal opened");" data-target="#myModal">Reply</button>
+                  -->
                 </div><!--/update-->
               </div>
             </div>
