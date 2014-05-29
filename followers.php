@@ -53,6 +53,20 @@
 
  <!-- Content -->
       <div id="followers" class="container">
+
+
+       <div class="row"> <!-- header -->
+
+          <div class="col-md-8">
+              <h2>Who's all here?</h2>
+           </div>
+          
+          <div class="col-md-4"></div>
+
+        </div>
+
+
+
         <div id="holder" class="row" style="display:none;">
 
             <!-- templates print here -->
@@ -109,7 +123,7 @@ var users_name = { "users": <?php print_r($users_json_name); ?> };
           </div>
     {/users}
   </script>
-  
+
 <?php include_once('php/includes/footer.php'); ?>
     <script>
     // Set up and compile the Dust.js templates
