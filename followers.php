@@ -3,6 +3,16 @@
     $title = 'Followers - The Feast Connection Tool';
     include_once('php/includes/header.php'); 
 
+    // users by id
+    $users_id = $db->get_results("SELECT * FROM users ORDER BY id DESC");
+    $users_array_id = array();
+    $users_json_id = json_encode($users_id);
+
+    //users by name
+    $users_name = $db->get_results("SELECT * FROM users ORDER BY lname");
+    $users_array_name = array();
+    $users_json_name = json_encode($users_name);
+
 ?>
 
 <!-- Modal -->
@@ -43,96 +53,79 @@
 
  <!-- Content -->
       <div id="followers" class="container">
-        <div class="row">
+        <div id="holder" class="row" style="display:none;">
 
-<?php 
-  
-  //get users
-  $users = $db->get_results("SELECT fname, lname, avatar, city, bio, url, twitter, linkedin, instagram, what, why FROM users");
-
-  //parse through users
-  foreach ($users as $user){ ?>
- <img src='images/project/gita.png' alt='$user->fname $user->lname' title='$user->fname'/><br/>
-  } ?>
-
-      <div class='follower col-md-6'>
-            <div class='follower_wrap round'>
-                <div class='follower_left'>
-                <img src='images/project/gita.png' alt='$user->fname $user->lname' title='$user->fname'/><br/>
-               <!-- <h5><a class='follower_replies' data-toggle='modal' data-target='#myModal' onClick='mixpanel.track('View replies modal opened');'>2 Replies</a></h5> -->
-                
-              </div>
-  <div class="follower_right">
-                <h2><?php echo $user->fname;?> <?php echo $user->lname;?></h2>
-                <h5>New York City</h5>
-                <p>Community @primeproduce. Partnerships @catchafire. Chair @ynpnnyc. Love social-info-tech-design.</p>
-                <ul>
-                  <li><a href=""><img src="images/icons/link.png"/></a></li>
-                  <li><a href=""><img src="images/icons/twitter.png"/></a></li>
-                  <li><a href=""><img src="images/icons/linkedin.png"/></a></li>
-                  <li><a href=""><img src="images/icons/instagram.png"/></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
- 
-
-  //print out html
-
-  //loop through social media links, display the ones that are populated
-?>
-
-
-          <div class="follower col-md-6">
-            <div class="follower_wrap round">
-                <div class="follower_left">
-                <img src="images/project/gita.png" alt="Gita Nandan" title="Gita Nandan"/><br/>
-               <!-- <h5><a class='follower_replies' data-toggle='modal' data-target='#myModal' onClick='mixpanel.track('View replies modal opened');'>2 Replies</a></h5> -->
-                
-              </div>
-              <div class="follower_right">
-                <h2>Chris Cannon</h2>
-                <h5>New York City</h5>
-                <p>Community @primeproduce. Partnerships @catchafire. Chair @ynpnnyc. Love social-info-tech-design.</p>
-                <ul>
-                  <li><a href=""><img src="images/icons/link.png"/></a></li>
-                  <li><a href=""><img src="images/icons/twitter.png"/></a></li>
-                  <li><a href=""><img src="images/icons/linkedin.png"/></a></li>
-                  <li><a href=""><img src="images/icons/instagram.png"/></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-<div class="follower col-md-6">
-            <div class="follower_wrap round">
-                <div class="follower_left">
-                <img src="images/project/gita.png" alt="Gita Nandan" title="Gita Nandan"/><br/>
-               <!-- <h5><a class='follower_replies' data-toggle='modal' data-target='#myModal' onClick='mixpanel.track('View replies modal opened');'>2 Replies</a></h5> -->
-                
-              </div>
-              <div class="follower_right">
-                <h2>Chris Cannon</h2>
-                <h5>New York City</h5>
-                <p>Community @primeproduce. Partnerships @catchafire. Chair @ynpnnyc. Love social-info-tech-design.</p>
-                <ul>
-                  <li><a href=""><img src="images/icons/link.png"/></a></li>
-                  <li><a href=""><img src="images/icons/twitter.png"/></a></li>
-                  <li><a href=""><img src="images/icons/linkedin.png"/></a></li>
-                  <li><a href=""><img src="images/icons/instagram.png"/></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+            <!-- templates print here -->
 
 
   
-
+        </div><!-- holder -->
       </div> <!-- /container -->
   <!-- /Main Content -->
 
+
+<script src="js/dust-full-2.0.3.js"></script>
+
+<script>
+mixpanel.track("Followers page");
+var users_id = { "users": <?php print_r($users_json_id); ?> };
+var users_name = { "users": <?php print_r($users_json_name); ?> };
+</script>
+
+ <!-- digest template (col-md-6 = 50% width) -->
+  <script type="text/x-template" id="follower_template">
+    {#users}
+        <div class="col-md-6 follower" id="follower{id}"> 
+              <div class="follower_wrap round">
+                <div class="follower_left">
+                <img src="{avatar}" alt="{fname} {lname}" title="{fname} {lname}"/><br/>
+                <!-- <h5><a class='follower_replies' data-toggle='modal' data-target='#myModal' onClick='mixpanel.track('View replies modal opened');'>2 Replies</a></h5> -->
+                
+              </div>
+              <div class="follower_right">
+                <h2>{fname} {lname}</h2>
+                <h5>{city}</h5>
+                <p>{bio}</p>
+                <ul>
+                  {#url}
+                  <li><a href="{url}"><img src="images/icons/link.png"/></a></li>
+                  {:else}
+                  {/url}
+                  {#twitter}
+                  <li><a href="http://twitter.com/{twitter}"><img src="images/icons/twitter.png"/></a></li>
+                  {:else}
+                  {/twitter}
+                  {#linkedin}
+                  <li><a href="http://linkedin.com/in/{linkedin}"><img src="images/icons/linkedin.png"/></a></li>
+                  {:else}
+                  {/linkedin}
+                  {#instagram}
+                  <li><a href="http://instagram.com/{instagram}"><img src="images/icons/instagram.png"/></a></li>
+                  {:else}
+                  {/instagram}
+                </ul>
+              </div>
+            </div>
+          </div>
+    {/users}
+  </script>
+  
 <?php include_once('php/includes/footer.php'); ?>
-<script>mixpanel.track("Followers page");</script>
+    <script>
+    // Set up and compile the Dust.js templates
+    var follower_dust = dust.compile($("#follower_template").html(),"follower_dust");
+    dust.loadSource(follower_dust);
+  
+    // render the templates
+    dust.render("follower_dust", users_id, function(err, res){
+    $("#holder").append(res);
+    $("#holder").fadeIn();
+    console.log("dust loaded");
+    adjustCardHeight();
+    });
+
+  </script>
+
 
   </body>
   </html>

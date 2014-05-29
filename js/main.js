@@ -1,3 +1,15 @@
+  function adjustCardHeight() {
+    $('.follower:nth-child(even)').each(function(){
+        var thisHeight = $(this).css('height');
+
+        var oddHeight = $(this).prev().css('height');
+
+        if (oddHeight > thisHeight) {
+          $(this).css('height', oddHeight);
+      }
+    });
+  }
+
 $(function(){
         
 //Site-wide question modal
@@ -105,5 +117,7 @@ $('#post_twitter').click(function() {
           }          
       });     
     });
+
+    
 
 });
