@@ -62,7 +62,8 @@
           <div class="col-md-8">
               <h2>Who's all here?</h2>
               <p>There are <?php echo $user_count; ?> people following New York Rising, check them out!<br/>
-              <i>Is your avatar missing? Send a photo to <a href="mailto:tash@feastongood.com">tash@feastongood.com</a> and we'll post it.</i></p>
+              <i>Is your avatar missing? Want to update any of your info?
+              <br/>Send <a href="mailto:tash@feastongood.com">tash@feastongood.com</a> a note and we'll post it.</i></p>
           </div>
           
           <div class="col-md-4"></div>

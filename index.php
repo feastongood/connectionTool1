@@ -89,8 +89,8 @@
               <p>Team member</p>
             </div>
             <div class="helper_count">
-              <h3><?php echo $userCount; ?></h3>
-              <p>Helpers and Followers</p>
+              <a href="followers.php"><h3><?php echo $userCount; ?></h3>
+              <p>Followers</p></a>
             </div>
           </div>
 
@@ -127,7 +127,7 @@
 
               <div class="helpers"></div>
               <div class="followers">
-                <h5><?php echo $userCount; ?> Followers</h5>
+                <a href="followers.php"><h5><?php echo $userCount; ?> Followers</h5></a>
               </div>
             </div>
 
