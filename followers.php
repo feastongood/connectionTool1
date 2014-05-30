@@ -95,7 +95,10 @@ var users_name = { "users": <?php print_r($users_json_name); ?> };
         <div class="col-md-6 follower" id="follower{id}"> 
               <div class="follower_wrap round">
                 <div class="follower_left">
+                {#avatar}
                 <img src="{avatar}" alt="{fname} {lname}" title="{fname} {lname}"/><br/>
+                {:else}
+                {/avatar}
                 <!-- <h5><a class='follower_replies' data-toggle='modal' data-target='#myModal' onClick='mixpanel.track('View replies modal opened');'>2 Replies</a></h5> -->
                 
               </div>
@@ -105,7 +108,7 @@ var users_name = { "users": <?php print_r($users_json_name); ?> };
                 <p>{bio}</p>
                 <ul>
                   {#url}
-                  <li><a href="{url}"><img src="images/icons/link.png"/></a></li>
+                  <li><a href="http://{url}"><img src="images/icons/link.png"/></a></li>
                   {:else}
                   {/url}
                   {#twitter}

@@ -156,6 +156,10 @@ img.cover {
 	float:right;
 }
 
+.follower_right h2{
+	text-transform: capitalize;
+}
+
 .follower_right h2, .follower_right h5 {
 	margin:0;
 	padding: 0;
