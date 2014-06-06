@@ -34,7 +34,7 @@ include_once('php/includes/header.php'); ?>
     </div><!-- /.modal-dialog -->
   </div>
 
-      <div class="container">
+      <div class="container-fluid">
       	<form class="form-inline" role="form" action="php/post_signup.php" method="post">
         <!-- Example row of columns -->
         <div class="row">
