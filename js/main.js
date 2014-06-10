@@ -107,7 +107,9 @@ $('#post_twitter').click(function() {
               reply : $('#reply').val(),
               questionID   : $('#questionID').val(),
               userID  : $('#userID').val(),
-              twitter : $('#twitter').val()
+              //twitter : $('#twitter').val(),
+              name   : $('#reply_name').val(),
+              email   : $('#reply_email').val()
           },
           success:function (data) {
               $("#modal-question").html(data);

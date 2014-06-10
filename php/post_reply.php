@@ -20,12 +20,14 @@
     /**********************************************************************/
 
 $reply = addslashes($_POST["reply"]);
+$name = addslashes($_POST["name"]);
+$email = addslashes($_POST["email"]);
 //$questionID = $_POST["questionID"];
-$questionID = 2;
-$twitter = $_POST["twitter"];
+$questionID = 3;
+//$twitter = $_POST["twitter"];
 
 
-if ($db->query("INSERT INTO replies (id, reply, questionID, twitter) VALUES (NULL, '".$reply."','".$questionID."','".$twitter."')")){
+if ($db->query("INSERT INTO replies (id, reply, questionID, name, email) VALUES (NULL, '".$reply."','".$questionID."','".$name."','".$email."')")){
 
     echo ("<p>Thanks! We've recorded your reply.</p>");
 } else {

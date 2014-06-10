@@ -1,13 +1,13 @@
 <?php
     include_once('php/config.php'); 
-    $title = 'The Feast - The Feast Connection Tool';
+    $title = 'New York Rising - The Feast Connection Tool';
     include_once('php/includes/header.php'); 
 
     //user count
     $userCount = $db->get_var("SELECT count(*) FROM users");
 
     //reply storage
-    $q1replies = $db->get_results("SELECT reply, twitter, dateAdded FROM replies WHERE questionID=3 and display=1");
+    $q1replies = $db->get_results("SELECT reply, twitter, dateAdded FROM replies WHERE questionID=2 and display=1");
     $q1_html = '';
 
     if (count($q1replies) > 0 ){
@@ -54,29 +54,14 @@
       <div id="modal-question"></div>
         <form class="form-inline" role="form">
           <textarea id="reply"></textarea>
-          <!-- <div class="form-group">
+           <div class="form-group">
             <label for="twitter">Your Twitter Name</label>
             <div class="input-group">
               <span class="input-group-addon">@</span>
               <input type="text" class="form-control" id="twitter" name="twitter" placeholder="feastongood">
             </div>
-          </div>-->
-
-            <div class="form-group" stye="float:left;">
-           <label for="name">Name</label>
-            <div class="input-group">
-              <input type="text" class="form-control" id="reply_name" name="reply_name" placeholder="">
-            </div>
-            </div>
-          
-          <div class="form-group" stye="float:left;">
-           <label for="name">Email</label>
-            <div class="input-group">
-              <input type="text" class="form-control" id="reply_email" name="reply_email" placeholder="">
-            </div>
-            </div>
-
-          <input type="text" style="display:none;" id="questionID" name="questionID" value="3"> <!-- update with question id-->
+          </div>
+          <input type="text" style="display:none;" id="questionID" name="questionID" value="2"> <!-- update with question id-->
           <input type="text" style="display:none;" id="userID" name="userID" value=""> <!-- update with userID us PHP-->
         </form>
       </div>
@@ -92,16 +77,16 @@
       <div id="project_header" class="container">
         <div class="row">
           <div class="col-md-9">
-              <h2>The Feast</h2>
-              <h5>Established 2008</h5>
-              <p>The Feast is committed to fostering a community of innovators who are revolutionizing their industries and striving for social impact. Each year we host a flagship Conference to share unique perspectives and tackle today’s greatest societal challenges. Our Conference serves as a starting point for relationships, groundbreaking projects and new initiatives that run all year long.
+              <h2>New York Rising</h2>
+              <h5>Established 2013</h5>
+              <p>The New York Rising Community Reconstruction Program is a more than $650 million planning and implementation process established in 2013 to provide rebuilding and resiliency assistance to communities severely damaged by Hurricane Irene, Tropical Storm Lee, and Superstorm Sandy.
 </p>
           </div>
           
           <div class="col-md-3" id="follower_count">
             <div class="team_count">
-              <h3>7</h3>
-              <p>Team members</p>
+              <h3>1</h3>
+              <p>Team member</p>
             </div>
             <div class="helper_count">
               <a href="followers.php"><h3><?php echo $userCount; ?></h3>
@@ -115,7 +100,7 @@
   <!-- Project Image/Video -->
       <div class="jumbotron">
         <div class="container">
-            <img class="cover" src="images/project/Feast_CoverPhoto.jpg" alt="The Feast"/>
+            <img class="cover" src="images/project/NYRising_CoverPhoto.jpg" alt="New York Rising"/>
         </div>
       </div>
 
@@ -127,26 +112,16 @@
             <div class="col-md-3 left_col round">
               <div class="team">
               <h5>Team</h5>
-                <!-- loop through team members? 
-					- query for project people
-					- loop through and print each member
-					- how do we denote CEO? or rank?
-                -->
-
-                <a href="followers.php#Jerri_Chou"><img class="avatar" src="http://pbs.twimg.com/profile_images/192787162/Chou_Jeri-088162_bigger.jpg" title="Jerri Chou" alt="Jerri Chou"/></a>
-                <a href="followers.php#Karen_Baker"><img class="avatar" src="http://pbs.twimg.com/profile_images/430911776600096768/xu_HNBmt_bigger.jpeg" title="Karen Baker" alt="Karen Baker"/></a>
-                <a href="followers.php#Lauren_Sinreich"><img class="avatar" src="http://pbs.twimg.com/profile_images/426144880390176768/PgSXbITA_bigger.jpeg" title="Lauren Sinreich" alt="Lauren Sinreich"/></a>
-                
-                <p>and 4 more.</p>                
+                <img class="avatar" src="images/project/gita.png" title="Gita Nandan" alt="Gita Nandan"/>
+                Gita Nandan
               </div>
               <!-- follow button -->
               <div class="external_links">
                 <ul>
-                  <li><img src="images/icons/link.png"/> <a href="http://feastongood.com" target="_blank">The Feast</a></li>
-                  <li><img src="images/icons/fb.png"/> <a href="https://www.facebook.com/feastongood" target="_blank">Facebook</a></li>
-                  <li><img src="images/icons/twitter.png"/> <a href="https://www.twitter.com/feastongood" target="_blank">Twitter</a></li>
-                  <li><img src="images/icons/instagram.png"/> <a href="https://www.instagram.com/feastongood" target="_blank">Instagram</a></li>
-                  <li><img src="images/icons/vimeo.png"/> <a href="https://www.vimeo.com/feastongood" target="_blank">Vimeo</a></li>
+                  <li><img src="images/icons/link.png"/> <a href="http://stormrecovery.ny.gov/community-reconstruction-program" target="_blank">New York Rising</a></li>
+                  <li><img src="images/icons/link.png"/> <a href="http://redhookcrp.wordpress.com" target="_blank">Red Hook CRP</a></li>
+                  <li><img src="images/icons/fb.png"/> <a href="https://www.facebook.com/NYStormRecovery" target="_blank">Facebook</a></li>
+                  <li><img src="images/icons/twitter.png"/> <a href="https://www.twitter.com/NYStormRecovery" target="_blank">Twitter</a></li>
                 </ul>
               </div>
 
@@ -162,23 +137,19 @@
                 <div class="update round">
                   <div class="col-md-7"><!-- wins and rocks -->
                     <h5>Wins</h5>
-                    <p>Several back to back serendipitous talks about a new way to do content that finally gets the systems map that is my brain out in a useful way for the world. Also starting to curate in a super solid thread around the idea of progression from self out to world throughout the conference.</p>
+                    <p>The committee is clearly keeping up the energy to keep on working even after the official end of the process, which is really inspirational volunteering activism.</p>
 
                     <h5>Rocks</h5>
-                    <p>Still trying to figure out the best way to facilitate mass collaboration in a way the lets attendees lead the dialogue while still curating useful and inspiring content/curatorial boundaries.  Also trying to figure out what's necessary vs. unnecessary to facilitate. </p>
+                    <p>As we move into the implementation phase there has been a bit of a communication breakdown from the top-down, and feeling a bit in the dark.  </p>
 
-                    <p>posted by <a href="followers.php#Jerri_Chou">Jerri Chou</a><br/>
-                    6/6/2014</p>
+                    <p>posted by Gita Nandan<br/>
+                    5/28/2014</p>
                     
                     <?php echo $replyLink; ?>
                   </div>
                   <div class="col-md-5 questions"><!-- question -->
                   <h5>Questions</h5>
-                  <p>What are the best generative tactics for organizing cross-disciplinary people around challenges of interest?</p>
-				  <ul>We're also looking for a:
-                  <li>Lead sponsor for the conference</li>
-                  <li><a href="http://feastongood.com/about/work-with-us/">Web engineer for The Connection Tool</a> </li>
-                  </ul>
+                  <p>If you had/have a vision of how to transform your community that requires multiple governmental agencies, what out of the box approaches would you take?</p>
                   </div>
 
                   <button class="btn btn-primary btn-lg reply" rel="1" data-toggle="modal" onClick="mixpanel.track("Post reply modal opened");" data-target="#myModal">Reply</button>

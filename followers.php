@@ -96,7 +96,7 @@ var users_name = { "users": <?php print_r($users_json_name); ?> };
               <div class="follower_wrap round">
                 <div class="follower_left">
                 {#avatar}
-                <img src="{avatar}" alt="{fname} {lname}" title="{fname} {lname}"/><br/>
+                <a id="{fname}_{lname}"><img src="{avatar}" alt="{fname} {lname}" title="{fname} {lname}"/></a><br/>
                 {:else}
                 {/avatar}
                 <!-- <h5><a class='follower_replies' data-toggle='modal' data-target='#myModal' onClick='mixpanel.track('View replies modal opened');'>2 Replies</a></h5> -->

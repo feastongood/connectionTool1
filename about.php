@@ -12,6 +12,17 @@
           <div class="col-md-8">
               <h2>About the Connection Tool</h2>
               
+<p><strong>UPDATE</strong> June 10, 2014<br/>
+
+<p>We've updated the project posted, transitioning from New York Rising to The Feast. Over the next few weeks, we'll likely add NY Rising back in, as long with a couple of other projects. Keep an eye out!</p>
+
+<p>We're also opening up this prototype to people who've attended a recent Feast event.</p> 
+
+<p><em>Want to join us?</em> Email <a href="mailto:tash@feastongood.com">tash@feastongood.com</a> with your info, and let me know what event you attended.</p>
+
+
+</p>
+
 <p><strong>Whats going on here?</strong><br/>
 This is the second prototype for a project currently named The Feast Connection Tool. We've brought together over 20 inspiring individuals around the work of Gita Nandan and New York Rising. Each week, Gita posts an update of the goings on at New York Rising. These updates are sent out to the community, who have an opportunity to contribute their knowledge and networks to help New York Rising succeed.</p>
 
