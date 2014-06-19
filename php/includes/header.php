@@ -82,7 +82,7 @@ mixpanel.init("6acbd1ffcd22d6cb19ded5a105b02ba9");</script><!-- end Mixpanel -->
       <header>
         <div class="container">
           <div class="col-md-8">
-            <h1 id="site-title"><a href="http://connection.feastongood.com/" title="The Feast" rel="home"><span class="hide-text">The Feast</span></a></h1>
+            <h1 id="site-title"><a href="http://connect.feastongood.com/" title="The Feast" rel="home"><span class="hide-text">The Feast</span></a></h1>
           </div>
           <div class="col-md-4"> <!-- is 3 with icons -->
             <!--<ul>
