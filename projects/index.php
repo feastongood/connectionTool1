@@ -70,7 +70,7 @@
 
     //get replies for each question
     foreach($question_ids as $x){
-      $replies = $db->get_results("SELECT reply, name, dateAdded FROM replies WHERE questionID=$x");
+      $replies = $db->get_results("SELECT reply, name, twitter, dateAdded FROM replies WHERE questionID=$x");
       $html = "<div id='$x' style='display:none;'>";
       $replyLink = "";
 
@@ -79,13 +79,14 @@
           $a_reply = $reply->reply;
           $name = $reply->name;
           $date = $reply->dateAdded;
+          $twitter = $reply->twitter;
 
           $date_time = strtotime($date);
           $date = date("F j, Y", $date_time);
           
           $reply_br = nl2br($a_reply);
 
-          $html .= "<div class='each_reply'><h5>$name on $date</h5> $reply_br</div>";
+          $html .= "<div class='each_reply'><h5><a href='http://twitter.com/$twitter'>$name</a> on $date</h5> $reply_br</div>";
         }
 
         //reply count: update manually
@@ -99,9 +100,9 @@
       $html .= "</div>";
       $reply_html .= $html;
       $reply_links[$x]= $replyLink;
-
     }
 
+print_r($reply_links);
 ?>
 
 
@@ -137,14 +138,13 @@
             </div>
           
           <div class="form-group" stye="float:left;">
-           <label for="name">Email</label>
+           <label for="name">Twitter</label>
             <div class="input-group">
-              <input type="text" class="form-control" id="reply_email" name="reply_email" placeholder="">
+              <input type="text" class="form-control" id="reply_twiter" name="reply_twiter" placeholder="">
             </div>
             </div>
 
-          <input type="text" style="display:none;" id="questionID" name="questionID" value=""> <!-- update with question id-->
-          <input type="text" style="display:none;" id="userID" name="userID" value=""> <!-- update with userID use PHP-->
+          <input type="text" style="display:none;" id="questionID" name="questionID" value=""> <!-- update with question id -->
         </form>
       </div>
       <div class="modal-footer">
@@ -165,13 +165,8 @@
           </div>
           
           <div class="col-md-3" id="follower_count">
-            <div class="team_count">
-              <h3><?php echo $team_members_count; ?></h3>
-              <p>Team members</p>
-            </div>
-            <div class="helper_count">
-              <a href="followers.php"><h3><?php echo $userCount; ?></h3>
-              <p>Followers</p></a>
+            <h5>Team</h5>
+                <?php echo $team_html; ?> 
             </div>
           </div>
 
@@ -191,10 +186,6 @@
 
          <!-- Left Column -->
             <div class="col-md-3 left_col round">
-              <div class="team">
-              <h5>Team</h5>
-                <?php echo $team_html; ?>               
-              </div>
               <!-- follow button -->
               <div class="external_links">
                 <ul>

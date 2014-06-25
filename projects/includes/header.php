@@ -87,9 +87,11 @@ mixpanel.init("6acbd1ffcd22d6cb19ded5a105b02ba9");</script><!-- end Mixpanel -->
           <div class="col-md-4"> 
 
               <ul class="nav-bar">
-                <li><a onClick="mixpanel.track("Nav: Project Page");" href="index.php">The Feast</a></li>
-                <li><a onClick="mixpanel.track("Nav: Followers Page");" href="followers.php">Followers</a></li>
-                <li><a href="about.php" onClick="mixpanel.track("Nav: About Page");">About</a> </li>
+                <li><a onClick="mixpanel.track("Nav: The Feast");" href="?p=2">The Feast</a></li>
+                <li><a onClick="mixpanel.track("Nav: Coastermatic");" href="?p=3">Coastermatic</a></li>
+                <li><a onClick="mixpanel.track("Nav: Crisis Text");" href="?p=4">Crisis Text Line</a></li>
+                <li><a onClick="mixpanel.track("Nav: Followers Page");" href="../followers.php">Followers</a></li>
+                <li><a href="../about.php" onClick="mixpanel.track("Nav: About Page");">About</a> </li>
                 <li><a href="#" id="nav_question" onClick="mixpanel.track("Nav: Question Modal");" data-toggle="modal" data-target="#questionModal">Questions?</a></li>
               </ul>
 

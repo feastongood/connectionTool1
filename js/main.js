@@ -18,12 +18,12 @@
     $('#replies').children().hide();
     $('#replies #' + reply).show();
     $('#replies').show();
-    mixpanel.track('View replies, Question ' + reply); 
+    mixpanel.track('View replies: Question ' + reply); 
   }
 
   function set_question(id){
     $('.form-inline #questionID').attr('value', id);
-    mixpanel.track("Post reply, Question " + id);
+    mixpanel.track("Post reply: Question " + id);
   }
 
 $(function(){
@@ -114,9 +114,9 @@ $('#post_twitter').click(function() {
               reply : $('#reply').val(),
               questionID   : $('#questionID').val(),
               userID  : $('#userID').val(),
-              //twitter : $('#twitter').val(),
+              twitter : $('#reply_twitter').val(),
               name   : $('#reply_name').val(),
-              email   : $('#reply_email').val()
+              //email   : $('#reply_email').val()
           },
           success:function (data) {
               $("#modal-question").html(data);

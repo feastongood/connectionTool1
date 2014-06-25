@@ -10,7 +10,7 @@
                     <p>posted by <a href="followers.php#Jen_Chiou">Jen Chiou</a><br/>
                     6/25/2014</p>
                     
-                    <?php echo $replyLink; ?>
+                    <?php echo $reply_links[5]; ?>
                   </div>
                   <div class="col-md-5 questions"><!-- question -->
                   <h5>Questions</h5>
@@ -18,6 +18,6 @@
                   <p>We're opening up our remote volunteer program to groups of employees to train and volunteer together.  </p>
                   </div>
 
-                  <button class="btn btn-primary btn-lg reply" rel="1" data-toggle="modal" onClick="mixpanel.track("Post reply modal opened");" data-target="#myModal">Reply</button>
+                  <button class="btn btn-primary btn-lg reply" data-toggle="modal" onClick="set_question(5);" data-target="#myModal">Reply</button>
                  
                 </div><!--/update-->

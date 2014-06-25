@@ -9,14 +9,14 @@
     <p>posted by <a href="followers.php#Jerri_Chou">Jerri Chou</a><br/>
     6/25/2014</p>
     
-    <?php echo $reply_links[11]; ?>
+    <?php echo $reply_links[3]; ?>
   </div>
   <div class="col-md-5 questions"><!-- question -->
   <h5>Questions</h5>
   <p>Who should we connect with who is funding content these days? </p>
   </div>
 
-  <button class="btn btn-primary btn-lg reply" rel="11" data-toggle="modal" onClick="set_question(11)" data-target="#myModal">Reply</button>
+  <button class="btn btn-primary btn-lg reply" rel="11" data-toggle="modal" onClick="set_question(3)" data-target="#myModal">Reply</button>
  
 </div><!--/update-->
 
@@ -31,7 +31,7 @@
     <p>posted by <a href="followers.php#Jerri_Chou">Jerri Chou</a><br/>
     6/6/2014</p>
     
-    <?php echo $reply_links[12]; ?>
+    <?php echo $reply_links[6]; ?>
   </div>
   <div class="col-md-5 questions"><!-- question -->
   <h5>Questions</h5><p>What are the best generative tactics for organizing cross-disciplinary people around challenges of interest?</p>
@@ -40,5 +40,6 @@
   <li>Web engineer for The Connection Tool [Found one!] </li>
   </ul>
   </div>
- 
+
+ <button class="btn btn-primary btn-lg reply" rel="11" data-toggle="modal" onClick="set_question(6)" data-target="#myModal">Reply</button>
 </div><!--/update-->

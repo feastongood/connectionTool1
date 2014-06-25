@@ -1,3 +1,5 @@
+<!-- set question id for $reply_links + set_question -->
+
 <div class="update round">
                   <div class="col-md-7"><!-- wins and rocks -->
                     <h5>Wins</h5>
@@ -12,7 +14,7 @@ Next, I'd like to approach office spaces with the current Coastermatic offering,
                     <p>posted by <a href="followers.php#Tash_Wong">Tash Wong</a><br/>
                     6/25/2014</p>
                     
-                    <?php echo $replyLink; ?>
+                    <?php echo $reply_links[4]; ?>
                   </div>
                   <div class="col-md-5 questions"><!-- question -->
                   <h5>Questions</h5>
@@ -21,6 +23,6 @@ Next, I'd like to approach office spaces with the current Coastermatic offering,
 
                   </div>
 
-                  <button class="btn btn-primary btn-lg reply" rel="5" data-toggle="modal" onClick="mixpanel.track("Post reply modal opened");" data-target="#myModal">Reply</button>
+                  <button class="btn btn-primary btn-lg reply" rel="5" data-toggle="modal" onClick="set_question(4);" data-target="#myModal">Reply</button>
                  
                 </div><!--/update-->
