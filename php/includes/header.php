@@ -121,8 +121,10 @@ mixpanel.init("6acbd1ffcd22d6cb19ded5a105b02ba9");</script><!-- end Mixpanel -->
       <p>Have a question about what's going on here? <br/>
       Found a bug?<br/>
       Have an amazing idea you think we should add in?</p>
+
+      <h5>Send an email to <a href="mailto:tash@feastongood.com">tash@feastongood.com</a> and let us know!</h5>
         
-        <label for="question">Let us know!</label>
+       <!-- <label for="question">Let us know!</label>
           <textarea id="question"></textarea>
            <div class="form-group" stye="float:left;">
            <label for="name">Name</label>
@@ -136,7 +138,7 @@ mixpanel.init("6acbd1ffcd22d6cb19ded5a105b02ba9");</script><!-- end Mixpanel -->
             <div class="input-group">
               <input type="text" class="form-control" id="email" name="email" placeholder="">
             </div>
-          </div>
+          </div>-->
         </form>
       </div>
       

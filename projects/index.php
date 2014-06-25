@@ -140,7 +140,7 @@ print_r($reply_links);
           <div class="form-group" stye="float:left;">
            <label for="name">Twitter</label>
             <div class="input-group">
-              <input type="text" class="form-control" id="reply_twiter" name="reply_twiter" placeholder="">
+              <input type="text" class="form-control" id="reply_twitter" name="reply_twitter" placeholder="">
             </div>
             </div>
 
