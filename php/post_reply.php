@@ -23,11 +23,12 @@ $reply = addslashes($_POST["reply"]);
 $name = addslashes($_POST["name"]);
 $twitter = $_POST["twitter"];
 $questionID = $_POST["questionID"];
+$projectID = $_POST["projectID"];
 //$questionID = 3;
 //$twitter = $_POST["twitter"];
 
 
-if ($db->query("INSERT INTO replies (id, reply, questionID, name, twitter) VALUES (NULL, '".$reply."','".$questionID."','".$name."','".$twitter."')")){
+if ($db->query("INSERT INTO replies (id, reply, questionID, projectID, name, twitter) VALUES (NULL, '".$reply."','".$questionID."','".$projectID."','".$name."','".$twitter."')")){
 
     echo ("<p>Thanks! We've recorded your reply.</p>");
 } else {

@@ -113,6 +113,7 @@ $('#post_twitter').click(function() {
           data: {
               reply : $('#reply').val(),
               questionID   : $('#questionID').val(),
+              projectID: $('#projectID').val(),
               twitter : $('#reply_twitter').val(),
               name   : $('#reply_name').val()
               //email   : $('#reply_email').val()

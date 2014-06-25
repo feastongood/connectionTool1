@@ -101,8 +101,6 @@
       $reply_html .= $html;
       $reply_links[$x]= $replyLink;
     }
-
-print_r($reply_links);
 ?>
 
 
@@ -145,6 +143,7 @@ print_r($reply_links);
             </div>
 
           <input type="text" style="display:none;" id="questionID" name="questionID" value=""> <!-- update with question id -->
+          <input type="text" style="display:none;" id="projectID" name="projectID" value="<?php echo $project_id; ?>"> <!-- update with question id -->
         </form>
       </div>
       <div class="modal-footer">

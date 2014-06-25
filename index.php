@@ -1,8 +1,6 @@
+<?php
 
-
- <?php
-
-   header( 'Location: http://connect.feastongood.com/projects/?p=2' ) ;
+   header( 'Location: http://connect.feastongood.com/projects/?p=2' ); ;
 
 ?>
 
