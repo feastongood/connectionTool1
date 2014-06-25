@@ -22,8 +22,8 @@
 $reply = addslashes($_POST["reply"]);
 $name = addslashes($_POST["name"]);
 $email = addslashes($_POST["email"]);
-//$questionID = $_POST["questionID"];
-$questionID = 3;
+$questionID = $_POST["questionID"];
+//$questionID = 3;
 //$twitter = $_POST["twitter"];
 
 

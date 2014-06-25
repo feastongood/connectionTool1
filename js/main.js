@@ -10,6 +10,22 @@
     });
   }
 
+  function open_reply(reply){
+    $("#myModal form").hide();
+    $("#reply_question").hide();
+    $("#myModalLabel").html('A reply or two');
+
+    $('#replies').children().hide();
+    $('#replies #' + reply).show();
+    $('#replies').show();
+    mixpanel.track('View replies, Question ' + reply); 
+  }
+
+  function set_question(id){
+    $('.form-inline #questionID').attr('value', id);
+    mixpanel.track("Post reply, Question " + id);
+  }
+
 $(function(){
         
 //Site-wide question modal
@@ -24,7 +40,7 @@ $(function(){
       
       $.ajax({
           type : 'POST',
-          url : 'php/post_question.php',           
+          url : 'http://connect.feastongood.com/php/post_question.php',           
           data: {
               question : $('#question').val(),
               name   : $('#name').val(),
@@ -83,26 +99,17 @@ $('#post_twitter').click(function() {
       
       //get new content
       var question_txt = $(this).siblings('.questions').html();
-      var question_id = $(this).attr('rel');
       
       //add new content
       $('#modal-question').html(question_txt);
       $('#questionID').val(question_id);
     });
 
-    $('a.replies').click(function(){
-      //set modal
-      $('#replies').show(),
-      $("#myModal form").hide();
-      $("#reply_question").hide();
-      $("#myModalLabel").html('A reply or two');
-    });
-
     $('#reply_question').click(function() {
       
       $.ajax({
           type : 'POST',
-          url : 'php/post_reply.php',           
+          url : '../php/post_reply.php',           
           data: {
               reply : $('#reply').val(),
               questionID   : $('#questionID').val(),

@@ -115,6 +115,7 @@ img.cover {
 	padding: 15px 0;
 	overflow: hidden;
 	min-height: 350px;
+	margin-bottom:10px;
 }
 
 .update button{
@@ -122,6 +123,9 @@ img.cover {
 	margin-right:15px;
 }
 
+a.replies {
+	cursor: pointer;
+}
 
 /* About */
 #about {
