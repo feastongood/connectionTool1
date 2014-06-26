@@ -22,7 +22,7 @@
     $team_html = "";
     foreach ($team_members as $member){
       $underscore_name = $member->fname ."_" . $member->lname;
-      $temp = "<a href='followers.php#$underscore_name'><img class='avatar' src='$member->avatar' title='$member->fname $member->lname' alt='$member->fname $member->lname'/></a>
+      $temp = "<a href='../followers.php#$underscore_name'><img class='avatar' src='$member->avatar' title='$member->fname $member->lname' alt='$member->fname $member->lname'/></a>
       ";
 
       $team_html .= $temp;
