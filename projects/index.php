@@ -56,12 +56,12 @@
     // REPLIES
 
     //get question ids for this project
-    $question_ids_object = $db->get_results("SELECT Distinct(questionID) FROM replies WHERE projectID=$project_id");
-    
+    $question_ids_object = $db->get_results("SELECT id FROM updates WHERE projectID=$project_id");
+
     //convert question_ids to simple array
     $question_ids = array();
     foreach($question_ids_object as $q){ 
-      array_push($question_ids, $q->questionID);
+      array_push($question_ids, $q->id);
     }
 
     //create container array for reply html
