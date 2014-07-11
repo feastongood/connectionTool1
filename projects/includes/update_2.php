@@ -1,6 +1,28 @@
 <div class="update round">
   <div class="col-md-7"><!-- wins and rocks -->
     <h5>Wins</h5>
+    <p>Starting to get my interview series started!</p>
+
+    <h5>Rocks</h5>
+    <p>Working out the kinks of this interview series.</p>
+
+    <p>posted by <a href="followers.php#Jerri_Chou">Jerri Chou</a><br/>
+    7/10/2014</p>
+    
+    <?php echo $reply_links[7]; ?>
+  </div>
+  <div class="col-md-5 questions"><!-- question -->
+  <h5>Questions</h5>
+  <p>How can I generate more awareness of The Feast to people who'd want to attend? </p>
+  </div>
+
+  <button class="btn btn-primary btn-lg reply" rel="11" data-toggle="modal" onClick="set_question(7)" data-target="#myModal">Reply</button>
+ 
+</div><!--/update-->
+
+<div class="update round">
+  <div class="col-md-7"><!-- wins and rocks -->
+    <h5>Wins</h5>
     <p> Started building out of content model which is super exciting and going to be amazing! <br/>We also found a developer for the Connection Tool!</p>
 
     <h5>Rocks</h5>
