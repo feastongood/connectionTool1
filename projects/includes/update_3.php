@@ -1,5 +1,31 @@
 <!-- set question id for $reply_links + set_question -->
 
+<div class="update round">
+                  <div class="col-md-7"><!-- wins and rocks -->
+                    <h5>Wins</h5>
+                    <p>The work on the backend is nearly complete! There were a few bumps along the way, but I'm pretty happy with the work.
+
+</p>
+
+                    <h5>Rocks</h5>
+                    <p>Finding focus! Coastermatic is my side job right now, and I've found I'm easily excited about new projects. Sadly, since there isn't much time, said projects never properly come to fruition.
+</p>
+
+                    <p>posted by <a href="followers.php#Tash_Wong">Tash Wong</a><br/>
+                    7/28/2014</p>
+                    
+                    <?php echo $reply_links[11]; ?>
+                  </div>
+                  <div class="col-md-5 questions"><!-- question -->
+                  <h5>Questions</h5>
+                  <p>Does anyone have advice/a resource for setting financial goals? I know how much I'd like Coastermatic to make, but breaking it down into achievable steps is eluding me. </p>
+
+                  </div>
+
+                  <button class="btn btn-primary btn-lg reply" rel="5" data-toggle="modal" onClick="set_question(11);" data-target="#myModal">Reply</button>
+                 
+                </div><!--/update-->
+
 
 <div class="update round">
                   <div class="col-md-7"><!-- wins and rocks -->

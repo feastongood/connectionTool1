@@ -1,6 +1,30 @@
 <div class="update round">
   <div class="col-md-7"><!-- wins and rocks -->
     <h5>Wins</h5>
+    <p>Had some amazing conversations, space, and insight on how we can offer value and look to our community to support and grow The Feast organically. This is super exciting as we figure out how to move away from a sponsorship model. Also came up with some fantastic generative community processes and actions.</p>
+
+    <h5>Rocks</h5>
+    <p>Not enough time/ resources till October!</p>
+
+    <p>posted by <a href="followers.php#Jerri_Chou">Jerri Chou</a><br/>
+    7/28/2014</p>
+    
+    <?php echo $reply_links[10]; ?>
+  </div>
+  <div class="col-md-5 questions"><!-- question -->
+  <h5>Questions</h5>
+  <p>What can we offer our community in the short term that would be super valuable? (Some unifying object/activity across the dinners around the world? Job opportunities?)</p>
+
+<p>In the long term? (Lessons -if so what kind, retreats, books?) </p>
+  </div>
+
+  <button class="btn btn-primary btn-lg reply" rel="11" data-toggle="modal" onClick="set_question(10)" data-target="#myModal">Reply</button>
+ 
+</div><!--/update-->
+
+<div class="update round">
+  <div class="col-md-7"><!-- wins and rocks -->
+    <h5>Wins</h5>
     <p>Starting to get my interview series started!</p>
 
     <h5>Rocks</h5>
