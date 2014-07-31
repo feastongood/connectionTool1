@@ -40,6 +40,7 @@
   <link href="../css/foundation.css" rel="stylesheet">
   <link href="../css/feast.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 
   <!-- Typekit -->
   <script type="text/javascript" src="//use.typekit.net/uam3pbg.js"></script>
@@ -75,7 +76,7 @@ mixpanel.init("6acbd1ffcd22d6cb19ded5a105b02ba9");</script><!-- end Mixpanel -->
       <![endif]-->
 </head>
 
-    <body>
+    <body id="betaSignup">
 
 
       <!-- header -->

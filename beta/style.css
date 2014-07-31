@@ -1,0 +1,82 @@
+
+/* green boxes */
+
+.secondary li {
+	margin-left: 13px;
+}
+
+.secondary ul {
+	margin-bottom: none;
+}
+
+/* tables */
+table, table .form-group   {
+	width:100%;
+}
+
+body#betaSignup input {
+	width:100%;
+}
+
+table tbody tr td {
+	width:45%;
+}
+
+table tbody tr:nth-child(even) {
+background: none;
+}
+
+table label {
+	font-size: 21px;
+}
+
+table input {
+	font-size: 18px;
+	height: 40px
+}
+
+.input-group {
+	margin-bottom: 12px;
+}
+
+/* drop downs */
+
+.ddcontainer {
+	margin: 10px 0 40px;
+}
+
+.dd {
+	margin-bottom: 20px;
+}
+
+.dd label {
+	font-size: 21px;
+}
+
+.ddwrapper {
+	display: table;
+	width: 100%;
+	margin-top: 5px;
+}
+
+.ddwrapper div{
+	float: left;
+}
+
+.left, .right {
+	width: 45%;
+}
+
+body#betaSignup select {
+	width:100%;
+}
+
+.and {
+	padding:10px;
+}
+
+/* submit */
+body#betaSignup input.ml_submit {width: 25%;}
+
+
+

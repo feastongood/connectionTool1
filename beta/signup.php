@@ -7,7 +7,7 @@ include_once('includes/header.php'); ?>
 <!-- Main jumbotron for a primary marketing message or call to action -->
 
 
-<div class="modal fade bs-example-modal-sm in" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="false" id="twitter_check">
+<!-- <div class="modal fade bs-example-modal-sm in" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="false" id="twitter_check">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
 
@@ -30,25 +30,30 @@ include_once('includes/header.php'); ?>
         <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
         <button type="button" id="post_twitter" class="btn btn-primary">Yes</button>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div>
+    </div><!-- /.modal-content 
+  </div><!-- /.modal-dialog 
+</div> -->
 
 <div class="container-fluid">
  <form class="form-inline" role="form" action="php/post_signup.php" method="post">
-  <!-- Example row of columns -->
+  
+ <div class="row">
+   <div class="col-md-8">
+     <h1>Hi there!</h1>
+      <p>We're creating a digital space for social innovators and the people who support them to come together help each other do great work. It's called The Feast Connects, and the beta will launch around August 18th.</p>
+
+      <p>To join our beta test, please fill out the Contributor Signup form. <br/>
+      If you also have an organization or project you'd like to register, you'll be able to do that below.</p> 
+   </div>
+ </div>
+
   <div class="row">
     <div class="col-md-8">
 
-
-      <h1>Hi there!</h1>
-      <p>We're creating a digital space for social innovators and the people who support them to come together help each other do great work. It's called The Feast Connects, and the beta will launch around August 18th.</p>
-
-      <p>To join our beta test, please fill out the form below. If you have an organization or project you'd like to register, you'll be able to do that below.</p> 
-
         <h2>Contributor Signup</h2>
-        <h5>Basic info</h5>
-        <table id="basic_info">
+        <p>Thats right, you're more than just a <em>user</em>. Joining us makes you a <em>Contributor</em>.
+
+        <table><!--  id="basic_info"-->
           <tr>
             <td>
               <div class="form-group">
@@ -91,13 +96,42 @@ include_once('includes/header.php'); ?>
           </div>
         </td>
       </tr>
+      </table>
 
       <!-- drop downs -->
-      <tr>
-        <td>
-         <div class="form-group">
-          <label for="passion">What are you passionate about? </label>
-          <select name="passion" class="form-control">
+      <div class="ddcontainer">
+      <div class="dd">
+        <label for="passion">What are you passionate about? </label>
+        <div class="ddwrapper">
+          <div class="left">
+            <select name="passion" class="form-control">
+             <option value=""></option>
+             <option value="animal">Animal Rights</option>
+             <option value="arts">Arts + Culture</option>
+             <option value="children">Children + Youth</option>
+             <option value="civic">Civic Society + Engagement </option>
+             <option value="community">Community Development</option>
+             <option value="diversity">Diversity</option>
+             <option value="education">Education</option>
+             <option value="employment">Employment</option>
+             <option value="environment">Environment</option>
+             <option value="equality">Equality + Human Rights</option>
+             <option value="food">Food</option>
+             <option value="health">Health + Well-Being</option>
+             <option value="housing">Housing</option>
+             <option value="international">International Development</option>
+             <option value="poverty">Poverty</option>
+             <option value="rural">Rural Issues</option>
+             <option value="social">Social Justice</option>
+             <option value="spirituality">Spirituality</option>
+             <option value="sports">Sports + Recreation</option>
+             <option value="urban">Urban Issues</option>
+             <option value="transportation">Transportation</option>
+           </select>
+          </div>
+          <div class="and">and</div>
+          <div class="right">
+            <select name="passion2" class="form-control">
            <option value=""></option>
            <option value="animal">Animal Rights</option>
            <option value="arts">Arts + Culture</option>
@@ -121,38 +155,15 @@ include_once('includes/header.php'); ?>
            <option value="urban">Urban Issues</option>
            <option value="transportation">Transportation</option>
          </select>
-         <p>and </p>
-         <select name="passion2" class="form-control">
-           <option value=""></option>
-           <option value="animal">Animal Rights</option>
-           <option value="arts">Arts + Culture</option>
-           <option value="children">Children + Youth</option>
-           <option value="civic">Civic Society + Engagement </option>
-           <option value="community">Community Development</option>
-           <option value="diversity">Diversity</option>
-           <option value="education">Education</option>
-           <option value="employment">Employment</option>
-           <option value="environment">Environment</option>
-           <option value="equality">Equality + Human Rights</option>
-           <option value="food">Food</option>
-           <option value="health">Health + Well-Being</option>
-           <option value="housing">Housing</option>
-           <option value="international">International Development</option>
-           <option value="poverty">Poverty</option>
-           <option value="rural">Rural Issues</option>
-           <option value="social">Social Justice</option>
-           <option value="spirituality">Spirituality</option>
-           <option value="sports">Sports + Recreation</option>
-           <option value="urban">Urban Issues</option>
-           <option value="transportation">Transportation</option>
-         </select>
+          </div>
+        </div>
 
+      </div>
 
-       </div>
-     </td>
-     <td>
-      <div class="form-group">
+      <div class="dd">
         <label for="skill">What are you amazing at?</label>
+        <div class="ddwrapper">
+        <div class="left">
         <select name="skill" class="form-control">
           <option value=""></option>
           <option value="problem">Problem Solving</option>
@@ -164,7 +175,6 @@ include_once('includes/header.php'); ?>
           <option value="administrative">Administrative Services</option>
           <option value="business">Business Consulting</option>
           <option value="coaching">Coaching + Training</option>
-          <option value="communications">Communications</option>
           <option value="environmental">Environmental / Sustainability Services</option>
           <option value="event">Event Management</option>
           <option value="facilitation">Facilitation</option>
@@ -173,7 +183,7 @@ include_once('includes/header.php'); ?>
           <option value="investment">Investment / Financial Services</option>
           <option value="legal">Legal Services</option>
           <option value="lobbying">Lobbying / Advocacy</option>
-          <option value="marketing">**** Communications / Marketing</option>
+          <option value="marketing">Communications / Marketing</option>
           <option value="organizational">Organizational Development / Strategic Planning</option>
           <option value="photography">Photography / Videography / Multimedia</option>
           <option value="service">Service Design</option>
@@ -188,7 +198,9 @@ include_once('includes/header.php'); ?>
           <option value="music">Music</option>
           <option value="art">Art</option>
         </select>
-        <p>and </p>
+        </div>
+        <div class="and">and </div>
+        <div class="right">
         <select name="skill2" class="form-control">
          <option value=""></option>
          <option value="problem">Problem Solving</option>
@@ -200,7 +212,6 @@ include_once('includes/header.php'); ?>
          <option value="administrative">Administrative Services</option>
          <option value="business">Business Consulting</option>
          <option value="coaching">Coaching + Training</option>
-         <option value="communications">Communications</option>
          <option value="environmental">Environmental / Sustainability Services</option>
          <option value="event">Event Management</option>
          <option value="facilitation">Facilitation</option>
@@ -209,7 +220,7 @@ include_once('includes/header.php'); ?>
          <option value="investment">Investment / Financial Services</option>
          <option value="legal">Legal Services</option>
          <option value="lobbying">Lobbying / Advocacy</option>
-         <option value="marketing">**** Communications / Marketing</option>
+         <option value="marketing">Communications / Marketing</option>
          <option value="organizational">Organizational Development / Strategic Planning</option>
          <option value="photography">Photography / Videography / Multimedia</option>
          <option value="service">Service Design</option>
@@ -224,14 +235,15 @@ include_once('includes/header.php'); ?>
          <option value="music">Music</option>
          <option value="art">Art</option>
        </select>
-     </div>
-   </td>
- </tr>
-</table>
+        </div>
+      </div>
+      </div>
+    </div><!-- ddcontainer -->
 
 
-<h5>Where can you be found?</h5>
+
 <table>
+<h4>Where can you be found?</h4>
   <tr>
    <td>
     <div class="form-group">
@@ -311,12 +323,11 @@ include_once('includes/header.php'); ?>
 <div class="col-md-4"> <!-- secondary contributor box -->
 
   <div class="secondary">
-    <p>Joining to The Feast Connects makes you a Contributor!</p>
     <p>As a Contributor, you'll be able to:</p>
     <ul>
-      <li>Find projects and organizations working in areas your passionate about</li>
-      <li>Sign up to receive regular email updates and asks from them</li>
-      <li>Share your knowledge and connections with those that need your help</li> 
+      <li>Find projects and organizations working in areas your passionate about.</li>
+      <li>Sign up to receive regular email updates and asks from them.</li>
+      <li>Share your knowledge and connections with those that need your help.</li> 
     </ul>
   </div>
 </div>
