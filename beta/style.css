@@ -1,3 +1,6 @@
+h4, h2 {
+	margin-bottom: 5px;
+}
 
 /* green boxes */
 
@@ -14,7 +17,7 @@ table, table .form-group   {
 	width:100%;
 }
 
-body#betaSignup input {
+body#betaSignup input[type=text] {
 	width:100%;
 }
 
@@ -73,6 +76,22 @@ body#betaSignup select {
 
 .and {
 	padding:10px;
+}
+
+/* project
+#project .secondary{
+	margin-top: 75px;
+}
+*/
+
+/* have org */
+#haveOrg label {
+	font-size: 21px;
+	margin-right: 20px;
+}
+
+#organization {
+	margin-top: 40px;
 }
 
 /* submit */
