@@ -355,7 +355,7 @@ include_once('includes/header.php'); ?>
 </div>
 </div>
 
- <input  type="submit" class="ml_submit" />
+
 
 </form>
 
@@ -366,13 +366,12 @@ include_once('includes/header.php'); ?>
       <h2>Organization signup</h2>
       <p>Projects, companies, and organizations making change! Sharing about the work you do is the soul of The Feast Connects.</p>
       
-      <form>
         <table>
           <tr>
             <td>
               <div class="form-group">
                 <label for="orgname"><strong>Organization Name</strong></label>
-                <input type="text" class="form-control" id="orgname" name="orgname" placeholder="The Feast" required>
+                <input type="text" class="form-control" id="name" name="name" placeholder="The Feast" required>
               </div>
             </td>
             <td>
@@ -385,8 +384,8 @@ include_once('includes/header.php'); ?>
           <tr>
             <td>
               <div class="form-group">
-                <label for="city"><strong>Location</strong></label>
-                <input type="text" class="form-control" id="city" name="city" placeholder="New York" required>
+                <label for="p_city"><strong>Location</strong></label>
+                <input type="text" class="form-control" id="p_city" name="p_city" placeholder="New York" required>
               </div>
             </td>
           </tr>
@@ -395,10 +394,10 @@ include_once('includes/header.php'); ?>
               <!-- drop downs -->
       <div class="ddcontainer">
         <div class="dd">
-          <label for="orgwork">What areas does your organization work in? </label>
+          <label for="p_passion_1">What areas does your organization work in? </label>
           <div class="ddwrapper">
             <div class="left">
-              <select name="orgwork" class="form-control">
+              <select name="passion_1" class="form-control">
                <option value=""></option>
                <option value="animal">Animal Rights</option>
                <option value="arts">Arts + Culture</option>
@@ -425,7 +424,7 @@ include_once('includes/header.php'); ?>
            </div>
            <div class="and">and</div>
            <div class="right">
-            <select name="passion2" class="form-control">
+            <select name="p_passion_2" class="form-control">
              <option value=""></option>
              <option value="animal">Animal Rights</option>
              <option value="arts">Arts + Culture</option>
@@ -455,10 +454,10 @@ include_once('includes/header.php'); ?>
      </div>
 
      <div class="dd">
-      <label for="orgskill">How does it solve problems?</label>
+      <label for="p_skill_1">How does it solve problems?</label>
       <div class="ddwrapper">
         <div class="left">
-          <select name="orgskill" class="form-control">
+          <select name="p_skill_1" class="form-control">
             <option value=""></option>
             <option value="problem">Problem Solving</option>
             <option value="systems">Systems Thinking</option>
@@ -495,7 +494,7 @@ include_once('includes/header.php'); ?>
         </div>
         <div class="and">and </div>
         <div class="right">
-          <select name="skill2" class="form-control">
+          <select name="p_skill_2" class="form-control">
            <option value=""></option>
            <option value="problem">Problem Solving</option>
            <option value="systems">Systems Thinking</option>
@@ -542,10 +541,10 @@ include_once('includes/header.php'); ?>
     <tr>
      <td>
       <div class="form-group">
-        <label for="url">URL</label>
+        <label for="p_website">URL</label>
         <div class="input-group">
           <span class="input-group-addon">http://</span>
-          <input type="text" class="form-control" id="url" name="url" placeholder="feastongood.com">
+          <input type="text" class="form-control" id="p_website" name="p_website" placeholder="feastongood.com">
         </div>
       </div>
 
@@ -553,10 +552,10 @@ include_once('includes/header.php'); ?>
 
     <td>
       <div class="form-group">
-        <label for="twitter">Twitter</label>
+        <label for="p_twitter_id">Twitter</label>
         <div class="input-group">
           <span class="input-group-addon">@</span>
-          <input type="text" class="form-control" id="twitter" name="twitter" placeholder="feastongood" required>
+          <input type="text" class="form-control" id="p_twitter_id" name="p_twitter_id" placeholder="feastongood" required>
         </div>
       </div>
 
@@ -564,19 +563,19 @@ include_once('includes/header.php'); ?>
     <tr>
       <td>
         <div class="form-group">
-          <label for="facebook">Facebook</label>
+          <label for="p_facebook_id">Facebook</label>
           <div class="input-group">
             <span class="input-group-addon">facebook.com/</span>
-            <input type="text" class="form-control" id="facebook" name="facebook" placeholder="feastongood">
+            <input type="text" class="form-control" id="p_facebook_id" name="p_facebook_id" placeholder="feastongood">
           </div>
         </div>
       </td>
       <td>
         <div class="form-group">
-          <label for="LinkedIn">LinkedIn</label>
+          <label for="p_linkedin_id">LinkedIn</label>
           <div class="input-group">
             <span class="input-group-addon">linkedin.com/in/</span>
-            <input type="text" class="form-control" id="linkedin" name="linkedin" placeholder="feastongood">
+            <input type="text" class="form-control" id="p_linkedin_id" name="p_linkedin_id" placeholder="feastongood">
           </div>
         </div>
       </td>
@@ -584,19 +583,19 @@ include_once('includes/header.php'); ?>
     <tr>
       <td>
        <div class="form-group">
-        <label for="instagram">Instagram</label>
+        <label for="p_instagram_id">Instagram</label>
         <div class="input-group">
           <span class="input-group-addon">instagram.com/</span>
-          <input type="text" class="form-control" id="instagram" name="instagram" placeholder="feastongood">
+          <input type="text" class="form-control" id="p_instagram_id" name="p_instagram_id" placeholder="feastongood">
         </div>
       </div>
     </td>
     <td>
      <div class="form-group">
-      <label for="youtube">Youtube</label>
+      <label for="p_youtube_id">Youtube</label>
       <div class="input-group">
         <span class="input-group-addon">youtube.com/</span>
-        <input type="text" class="form-control" id="youtube" name="youtube" placeholder="feastongood">
+        <input type="text" class="form-control" id="p_youtube_id" name="p_youtube_id" placeholder="feastongood">
       </div>
     </div>
   </td>
@@ -604,10 +603,10 @@ include_once('includes/header.php'); ?>
 <tr>
   <td>
    <div class="form-group">
-    <label for="vimeo">Vimeo</label>
+    <label for="p_vimeo_id">Vimeo</label>
     <div class="input-group">
       <span class="input-group-addon">vimeo.com/</span>
-      <input type="text" class="form-control" id="vimeo" name="vimeo" placeholder="feastongood">
+      <input type="text" class="form-control" id="p_vimeo_id" name="p_vimeo_id" placeholder="feastongood">
     </div>
   </div>
 </td>
@@ -615,8 +614,8 @@ include_once('includes/header.php'); ?>
 <tr>
   <td colspan="2">
    <div class="form-group">
-    <label for="extra">Anything else you'd like us to know?</label>
-      <textarea name="extra"></textarea>
+    <label for="p_notes">Anything else you'd like us to know?</label>
+      <textarea name="p_notes"></textarea>
     </div>
   </div>
 </td>
@@ -626,7 +625,7 @@ include_once('includes/header.php'); ?>
 
 
 
-</form>
+
 
 </div><!-- end col-8 -->
 <div class="col-md-4"> <!-- secondary contributor box -->
@@ -648,6 +647,7 @@ include_once('includes/header.php'); ?>
   <div class="col-md-12">
     <!-- original submit <input class="ml_submit" type="submit" onClick="mixpanel.track('Beta signup form submit');"/> -->
    
+    <input type="submit" value="Submit" class="ml_submit">
 
   </div>
 
@@ -655,15 +655,7 @@ include_once('includes/header.php'); ?>
 </div>
 
 
-<form id="target" action="destination.html">
-  <input type="text" value="Hello there">
-  <input type="submit" value="Go">
 </form>
-<div id="other">
-  Trigger the handler
-</div>
-
-
 </div> <!-- /container -->
 <!-- /Main Content -->
 
