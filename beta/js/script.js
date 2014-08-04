@@ -8,59 +8,49 @@ $(function(){
 	    
 	        if ($(this).val() == 'Yes'){
 	            $('#organization').slideDown();
+
+	            //add validation to appropriate fields
+		        $('#name').prop('required', true);
+		        $('#established').prop('required', true);
+		        $('#p_city').prop('required', true);
+
 	        } else {
 	        	$('#organization').slideUp();
+
+	        	//remove validation to appropriate fields
+		        $('#name').prop('required', false);
+		        $('#established').prop('required', false);
+		        $('#p_city').prop('required', false);
+	        }
+
+	        
+	    });
+
+	//callback handler for form submit
+	$("#contributor_form").submit(function( event )
+	{
+
+	    var postData = $('#contributor_form').serializeArray();
+	    var formURL = $('#contributor_form').attr("action");
+	    $.ajax(
+	    {
+	        url : formURL,
+	        type: "POST",
+	        data : postData,
+	        success:function(data, textStatus, jqXHR) 
+	        {
+	        	window.location.href = 'http://connection.feastongood.local/beta/thanks.php' + data;
+	        },
+	        error: function(jqXHR, textStatus, errorThrown) 
+	        {
+	        	alert('Oh no! There was a problem! Please email tash@feastongood.com and let us know.');
 	        }
 	    });
 
-//callback handler for form submit
-$("#contribute_form").submit(function( event )
-{
-	console.log('contribute form submit');
-    var postData = $('#contributor_form').serializeArray();
-    var formURL = $('#contributor_form').attr("action");
-    $.ajax(
-    {
-        url : formURL,
-        type: "POST",
-        data : postData,
-        success:function(data, textStatus, jqXHR) 
-        {
-        	console.log(data);
-            console.log(' Posted!');
-        },
-        error: function(jqXHR, textStatus, errorThrown) 
-        {
-        	console.log(data);
-            console.log(' broke!');     
-        }
-    });
-    event.preventDefault(); //STOP default action
-    event.unbind(); //unbind. to stop multiple form submit.
-});
+		event.preventDefault(); //STOP default action
+	    
+	});
  
-
-
-
-// ========================
-
-$( "#contribute_submit" ).click(function() {
-	console.log("submit clicked");
-  $("#contribute_form").submit();
-});
-
-
-// $( "#target" ).submit(function( event ) {
-//   alert( "Handler for .submit() called." );
-//   event.preventDefault();
-// });
-
-
-// $( "#other" ).click(function() {
-//   // $( "#target" ).submit();
-//   $("#contribute_form").submit();
-// });
-
 
 
 });

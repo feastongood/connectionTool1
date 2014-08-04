@@ -93,7 +93,7 @@ include_once('includes/header.php'); ?>
           <td>
              <div class="form-group">
               <label for="employer">Company</label>
-              <input type="text" class="form-control" id="employer" name="employer" placeholder="Feaster">
+              <input type="text" class="form-control" id="employer" name="employer" placeholder="The Feast">
             </div>
           </td>
         </tr>
@@ -128,6 +128,7 @@ include_once('includes/header.php'); ?>
                <option value="sports">Sports + Recreation</option>
                <option value="urban">Urban Issues</option>
                <option value="transportation">Transportation</option>
+               <option value="other">Other</option>
              </select>
            </div>
            <div class="and">and</div>
@@ -155,6 +156,7 @@ include_once('includes/header.php'); ?>
              <option value="sports">Sports + Recreation</option>
              <option value="urban">Urban Issues</option>
              <option value="transportation">Transportation</option>
+             <option value="other">Other</option>
            </select>
          </div>
        </div>
@@ -198,6 +200,7 @@ include_once('includes/header.php'); ?>
             <option value="urban">Urban Planning / Design</option>
             <option value="music">Music</option>
             <option value="art">Art</option>
+            <option value="other">Other</option>
           </select>
         </div>
         <div class="and">and </div>
@@ -235,6 +238,7 @@ include_once('includes/header.php'); ?>
            <option value="urban">Urban Planning / Design</option>
            <option value="music">Music</option>
            <option value="art">Art</option>
+           <option value="other">Other</option>
          </select>
        </div>
      </div>
@@ -356,9 +360,6 @@ include_once('includes/header.php'); ?>
 </div>
 
 
-
-</form>
-
 <!-- Project registration -->
 <div class="row" id="organization" style="display:none;">
 
@@ -370,14 +371,14 @@ include_once('includes/header.php'); ?>
           <tr>
             <td>
               <div class="form-group">
-                <label for="orgname"><strong>Organization Name</strong></label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="The Feast" required>
+                <label for="name"><strong>Organization Name</strong></label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="The Feast">
               </div>
             </td>
             <td>
               <div class="form-group">
                 <label for="established"><strong>Year Established</strong></label>
-                <input type="text" class="form-control" id="established" name="established" placeholder="2008" required>
+                <input type="text" class="form-control" id="established" name="established" placeholder="2008">
               </div>
             </td>
           </tr>
@@ -385,7 +386,7 @@ include_once('includes/header.php'); ?>
             <td>
               <div class="form-group">
                 <label for="p_city"><strong>Location</strong></label>
-                <input type="text" class="form-control" id="p_city" name="p_city" placeholder="New York" required>
+                <input type="text" class="form-control" id="p_city" name="p_city" placeholder="New York">
               </div>
             </td>
           </tr>
@@ -397,7 +398,7 @@ include_once('includes/header.php'); ?>
           <label for="p_passion_1">What areas does your organization work in? </label>
           <div class="ddwrapper">
             <div class="left">
-              <select name="passion_1" class="form-control">
+              <select name="p_passion_1" class="form-control">
                <option value=""></option>
                <option value="animal">Animal Rights</option>
                <option value="arts">Arts + Culture</option>
@@ -420,6 +421,7 @@ include_once('includes/header.php'); ?>
                <option value="sports">Sports + Recreation</option>
                <option value="urban">Urban Issues</option>
                <option value="transportation">Transportation</option>
+               <option value="other">Other</option>
              </select>
            </div>
            <div class="and">and</div>
@@ -447,6 +449,7 @@ include_once('includes/header.php'); ?>
              <option value="sports">Sports + Recreation</option>
              <option value="urban">Urban Issues</option>
              <option value="transportation">Transportation</option>
+             <option value="other">Other</option>
            </select>
          </div>
        </div>
@@ -490,6 +493,7 @@ include_once('includes/header.php'); ?>
             <option value="urban">Urban Planning / Design</option>
             <option value="music">Music</option>
             <option value="art">Art</option>
+            <option value="other">Other</option>
           </select>
         </div>
         <div class="and">and </div>
@@ -527,6 +531,7 @@ include_once('includes/header.php'); ?>
            <option value="urban">Urban Planning / Design</option>
            <option value="music">Music</option>
            <option value="art">Art</option>
+           <option value="other">Other</option>
          </select>
        </div>
      </div>
@@ -555,7 +560,7 @@ include_once('includes/header.php'); ?>
         <label for="p_twitter_id">Twitter</label>
         <div class="input-group">
           <span class="input-group-addon">@</span>
-          <input type="text" class="form-control" id="p_twitter_id" name="p_twitter_id" placeholder="feastongood" required>
+          <input type="text" class="form-control" id="p_twitter_id" name="p_twitter_id" placeholder="feastongood">
         </div>
       </div>
 
@@ -647,7 +652,7 @@ include_once('includes/header.php'); ?>
   <div class="col-md-12">
     <!-- original submit <input class="ml_submit" type="submit" onClick="mixpanel.track('Beta signup form submit');"/> -->
    
-    <input type="submit" value="Submit" class="ml_submit">
+    <input id="contribute_submit" type="submit" value="Submit" class="ml_submit">
 
   </div>
 

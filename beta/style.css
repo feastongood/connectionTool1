@@ -17,7 +17,7 @@ table, table .form-group   {
 	width:100%;
 }
 
-body#betaSignup input[type=text] {
+body#betaSignup input[type=text],  body#betaSignup input[type=email]{
 	width:100%;
 }
 
