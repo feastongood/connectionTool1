@@ -3,6 +3,8 @@
   //config
   include_once("../php/config.php");
 
+  date_default_timezone_set('America/Los_Angeles');
+
     /**********************************************************************
     *  ezSQL initialisation for mySQL
     */
@@ -27,9 +29,9 @@ ini_set('display_errors', 1);
 						
 		//$transport = Swift_MailTransport::newInstance();
 		$transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 587, 'tls')
-		  ->setUsername('tash@feastongood.com')
-		  ->setPassword('alldaylong')
-		  ;
+       ->setUsername('hq@coastermatic.com')
+       ->setPassword('3astcoast')
+       ;
 	//--- end swift
 	
 	
@@ -85,19 +87,23 @@ ini_set('display_errors', 1);
 				$mailer = Swift_Mailer::newInstance($transport);
 				$message = Swift_Message::newInstance();
 				$message ->setSubject('Welcome to The Feast Connects!');
-				$message ->setFrom(array($EMAIL_FROM => 'The Feast Connects'));
+				$message ->setFrom(array('hello@feastongood.com' => 'The Feast Connects'));
 				$message ->setTo(array($email_info['email'] => $email_info['fname']));
 				$message ->setReplyTo(array( 'tash@feastongood.com' => 'Tash Wong'));
 				
 				$message ->setBody($body, 'text/html');
 						
 				$result = $mailer->send($message);
-				
-				$email_result = $result;	
 
 				return $result;	
 
 				}
+
+				if (send_email($email_info)){ 
+		            $email_result = "sent";
+		        }else {
+		            $email_result = "no sent";
+		        }
 
 	
 
