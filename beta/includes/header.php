@@ -104,7 +104,7 @@ mixpanel.init("6acbd1ffcd22d6cb19ded5a105b02ba9");</script><!-- end Mixpanel -->
               </ul>
 -->
 
-<h3>The Feast Connects Beta signup!</h3>
+<h3>Special Preview</h3>
            
           </div>
         </div>

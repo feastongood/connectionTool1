@@ -1,6 +1,6 @@
 <?php 
 include_once('../php/config.php'); 
-$title = 'Signup - The Feast Connection Tool';
+$title = 'Preview Signup - The Feast Connection Tool';
 include_once('includes/header.php'); ?>
 
 <!-- Main Content -->
@@ -39,11 +39,10 @@ include_once('includes/header.php'); ?>
 
    <div class="row">
      <div class="col-md-8">
-       <h2>Hi there!</h2>
-       <p>We're creating a digital space for social innovators and the people who support them to come together help each other do great work. It's called The Feast Connects, and the beta will launch around August 18th.</p>
-
-       <p>To join our beta test, please fill out the Contributor Signup form. <br/>
-        If you also have an organization or project you'd like to register, you'll be able to do that below.</p> 
+       <h2>The Feast Connects Signup</h2>
+       <p>The Feast Connects is our online platform that will bring together the brainpower of today's most innovative social entrepreneurs to move their projects and businesses forward. This is an exclusive, first access, to the platform. The preview will officially launch around August 18th.</p> 
+       
+       <p>Please fill out the Contributor signup form. If you also have an organization or project you'd like to register, select Yes for the question "Have an organization or porject you'd like to register?". </p>
       </div>
     </div>
 
@@ -51,7 +50,7 @@ include_once('includes/header.php'); ?>
       <div class="col-md-8">
 
         <h2>Contributor Signup</h2>
-        <p>Thats right, you're more than just a <em>user</em>. Joining in the fun makes you a <em>Contributor</em>.<br/>
+        <p>Put your hard-earned skills to use for good. Join the fun as a Contributor.<br/>
         <span style="font-size:10px">Bold fields are required.</span></p>
 
           <table><!--  id="basic_info"-->
@@ -249,7 +248,6 @@ include_once('includes/header.php'); ?>
 
  <table>
   <h4>Where can you be found?</h4>
-  <p>Fill out the ones you'd like to share with others.</p>
   <tr>
    <td>
     <div class="form-group">
@@ -365,7 +363,11 @@ include_once('includes/header.php'); ?>
 
     <div class="col-md-8">
       <h2>Organization signup</h2>
-      <p>Projects, companies, and organizations making change! Sharing about the work you do is the soul of The Feast Connects.</p>
+     <!-- <p>The Feast Connects helps projects, companies, and organizations making change share about the work you do and connect with thinkers and doers that help you to move the world forward.</p>
+
+      <p>The Feast Connects helps projects, companies, and organizations - who are making change - share about the work they do and connect with thinkers & doers that help move the world forward.</p> -->
+
+      <p>The Feast Connects can help your project, company, or organization share it's work and mission with others. Connects can also help connect you with thinkers & doers that can propel your work forward.</p>
       
         <table>
           <tr>

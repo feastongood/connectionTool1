@@ -29,7 +29,7 @@ $(function(){
 	//callback handler for form submit
 	$("#contributor_form").submit(function( event )
 	{
-
+	    $(this).attr("disabled", "disabled");
 	    var postData = $('#contributor_form').serializeArray();
 	    var formURL = $('#contributor_form').attr("action");
 	    $.ajax(
