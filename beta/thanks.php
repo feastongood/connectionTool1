@@ -130,7 +130,7 @@ include_once('includes/header.php');
           <div class="heroContent col-md-8 col-md-offset-2">
             <h1 style="font-size: 120px; color:#00debc;">Thanks!</h1>
             
-            <p>Now you're ready to take part in The Feast Connects!<br/>The preview will launch in a couple of weeks. Until then, check your inbox for more information.</p>
+            <p>Now you're ready to take part in The Feast Connects!<br/>The preview will launch mid-August. Until then, check your inbox for more information.</p>
           </div>
 
         </div>
