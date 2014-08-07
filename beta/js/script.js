@@ -41,7 +41,6 @@ $(function(){
 	            
 	            //autofill fields
 	            $('input#avatar').val(twitterData.profile_image_url);
-	            console.log(twitterData.profile_image_url);
 	          }          
 	      }); 
 		}
@@ -63,7 +62,6 @@ $(function(){
 	            
 	            //autofill fields
 	            $('input#p_avatar').val(p_twitterData.profile_image_url);
-	            console.log(p_twitterData.profile_image_url);
 	            
 	          }          
 	      }); 
@@ -85,7 +83,7 @@ $(function(){
 	        data : postData,
 	        success:function(data, textStatus, jqXHR) 
 	        {
-	        	window.location.href = 'http://connection.feastongood.local/beta/thanks.php' + data;
+	        	window.location.href = 'http://connect.feastongood.com/beta/thanks.php' + data;
 	        },
 	        error: function(jqXHR, textStatus, errorThrown) 
 	        {
@@ -110,7 +108,8 @@ $(function(){
 	        data : postData,
 	        success:function(data, textStatus, jqXHR) 
 	        {
-	        	window.location.href = 'http://connection.feastongood.local/beta/thanks.php' + data;
+	        	window.location.href = 'http://connect.feastongood.com/beta/thanks.php' + data;
+	        	//console.log('http://connect.feastongood.com/beta/thanks.php' + data);
 	        },
 	        error: function(jqXHR, textStatus, errorThrown) 
 	        {

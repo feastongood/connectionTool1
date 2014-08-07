@@ -54,8 +54,8 @@ $admin_id = 0; //to be updated with insert id
 
 $return_msg = "";
 
-if($db->get_var("SELECT id FROM beta_contributors WHERE email=$email")){
-    $admin_id = $db->id;
+if($var = $db->get_var("SELECT id FROM beta_contributors WHERE email='$email'")){
+    $admin_id = $var;
 } else {
     $admin_id = 0;
 }
