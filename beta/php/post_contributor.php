@@ -33,9 +33,9 @@ $website = $_POST["website"];
 $twitter_id = $_POST["twitter_id"];
 $linkedin_id = $_POST["linkedin_id"];
 $facebook_id = $_POST["facebook_id"];
-$instagram_id = $_POST["instagram_id"];
-$vimeo_id = $_POST["vimeo_id"];
-$youtube_id = $_POST["youtube_id"];
+//$instagram_id = $_POST["instagram_id"];
+//$vimeo_id = $_POST["vimeo_id"];
+//$youtube_id = $_POST["youtube_id"];
 
 $title = addslashes($_POST["title"]);
 $employer = addslashes($_POST["employer"]);
@@ -73,11 +73,14 @@ $p_skill_2 = $_POST["p_skill_2"];
 
 $p_notes = addslashes($_POST["p_notes"]);
 
+$p_avatar = $_POST["p_avatar"];
+$p_avatarURL = str_replace("_normal", "_bigger", $p_avatar);
+
 $admin_id = 0; //to be updated with insert id
 
 $return_msg = "";
 
-if ($db->query("INSERT INTO beta_contributors (id, first_name, last_name, email, city, website, twitter_id, linkedin_id, facebook_id, instagram_id, vimeo_id, youtube_id, title, employer, passion_1, passion_2, skill_1, skill_2, notes, avatar) VALUES (NULL, '".$first_name."','".$last_name."','".$email."', '".$city."','".$website."','".$twitter_id."', '".$linkedin_id."', '".$facebook_id."','".$instagram_id."','".$vimeo_id."','".$youtube_id."','".$title."','".$employer."', '".$passion_1."','".$passion_2."','".$skill_1."','".$skill_2."','".$notes."','".$avatarURL."')")){
+if ($db->query("INSERT INTO beta_contributors (id, first_name, last_name, email, city, website, twitter_id, linkedin_id, facebook_id, title, employer, passion_1, passion_2, skill_1, skill_2, notes, avatar) VALUES (NULL, '".$first_name."','".$last_name."','".$email."', '".$city."','".$website."','".$twitter_id."', '".$linkedin_id."', '".$facebook_id."','".$title."','".$employer."', '".$passion_1."','".$passion_2."','".$skill_1."','".$skill_2."','".$notes."','".$avatarURL."')")){
 
     $admin_id = $db->insert_id;
 
@@ -88,7 +91,7 @@ if ($db->query("INSERT INTO beta_contributors (id, first_name, last_name, email,
 
 
 if ($hasProject == "Yes"){   
-    if ($db->query("INSERT INTO beta_projects (id, name, email, city, established, website, twitter_id, linkedin_id, facebook_id, instagram_id, vimeo_id, youtube_id, passion_1, passion_2, skill_1, skill_2, notes, admin_id) VALUES (NULL, '".$name."','".$email."','".$p_city."', '".$established."','".$p_website."','".$p_twitter_id."', '".$p_linkedin_id."', '".$p_facebook_id."','".$p_instagram_id."','".$p_vimeo_id."','".$p_youtube_id."', '".$p_passion_1."','".$p_passion_2."','".$p_skill_1."','".$p_skill_2."','".$p_notes."','".$admin_id."')")){
+    if ($db->query("INSERT INTO beta_projects (id, name, email, city, established, website, twitter_id, linkedin_id, facebook_id, instagram_id, vimeo_id, youtube_id, passion_1, passion_2, skill_1, skill_2, notes, admin_id, avatar) VALUES (NULL, '".$name."','".$email."','".$p_city."', '".$established."','".$p_website."','".$p_twitter_id."', '".$p_linkedin_id."', '".$p_facebook_id."','".$p_instagram_id."','".$p_vimeo_id."','".$p_youtube_id."', '".$p_passion_1."','".$p_passion_2."','".$p_skill_1."','".$p_skill_2."','".$p_notes."','".$admin_id."','".$p_avatarURL."')")){
 
         $return_msg .= "&type=project";
     }

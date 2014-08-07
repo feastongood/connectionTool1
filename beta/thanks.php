@@ -27,11 +27,7 @@ ini_set('display_errors', 1);
 	//include the swift class
 		include_once 'php/swift/swift_required.php';
 						
-		//$transport = Swift_MailTransport::newInstance();
-		$transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 587, 'tls')
-       ->setUsername('hq@coastermatic.com')
-       ->setPassword('3astcoast')
-       ;
+		
 	//--- end swift
 	
 	
@@ -83,7 +79,10 @@ ini_set('display_errors', 1);
 				$body = format_email($email_info,'html');
 				
 				//setup the mailer
-				$transport = Swift_MailTransport::newInstance();
+				$transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 587, 'tls')
+			       ->setUsername('tash@feastongood.com')
+			       ->setPassword('alldaylong')
+			       ;
 				$mailer = Swift_Mailer::newInstance($transport);
 				$message = Swift_Message::newInstance();
 				$message ->setSubject('Welcome to The Feast Connects!');
@@ -109,8 +108,6 @@ ini_set('display_errors', 1);
 
 $title = 'Thanks - The Feast Connects Preview';
 include_once('includes/header.php'); 
-print_r($email_info);
-print_r('email result =' . $email_result);
 
 ?>
 
@@ -124,8 +121,7 @@ print_r('email result =' . $email_result);
           <div class="heroContent col-md-8 col-md-offset-2">
             <h1 style="font-size: 120px; color:#00debc;">Thanks!</h1>
             
-            <p>Now you're ready to take part in The Feast Connects!<br/>
-           Launch of the preview will be around August 18th. Until then, check your inbox for more information.</p>
+            <p>Now you're ready to take part in The Feast Connects!<br/>The preview will launch in a couple of weeks. Until then, check your inbox for more information.</p>
           </div>
 
         </div>

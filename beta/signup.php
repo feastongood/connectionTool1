@@ -3,36 +3,6 @@ include_once('../php/config.php');
 $title = 'Preview Signup - The Feast Connection Tool';
 include_once('includes/header.php'); ?>
 
-<!-- Main Content -->
-<!-- Main jumbotron for a primary marketing message or call to action -->
-
-
-<!-- <div class="modal fade bs-example-modal-sm in" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="false" id="twitter_check">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h4 class="modal-title" id="mySmallModalLabel">Quick question</h4>
-      </div>
-      <div class="modal-body">
-        <p>Do you have a twitter account?</p>
-        <div class="form-group">
-          <label for="twitter_1">Twitter</label>
-          <div class="input-group">
-            <span class="input-group-addon">@</span>
-            <input type="text" class="form-control" id="twitter_1" name="twitter_1" placeholder="feastongood" required>
-          </div>
-        </div>
-        <p style="font-size: 11px;">We can autofill a few of these fields if you do.</p>
-      </div>
-      <div class="modal-footer" style="margin-top:0px">
-        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-        <button type="button" id="post_twitter" class="btn btn-primary">Yes</button>
-      </div>
-    </div><!-- /.modal-content 
-  </div><!-- /.modal-dialog 
-</div> -->
 
 <div class="container-fluid">
  <form class="form-inline" role="form" id="contributor_form" action="php/post_contributor.php" method="post">
@@ -40,9 +10,11 @@ include_once('includes/header.php'); ?>
    <div class="row">
      <div class="col-md-8">
        <h2>The Feast Connects Signup</h2>
-       <p>The Feast Connects is our online platform that will bring together the brainpower of today's most innovative social entrepreneurs to move their projects and businesses forward. This is an exclusive, first access, to the platform. The preview will officially launch around August 18th.</p> 
-       
-       <p>Please fill out the Contributor signup form. If you also have an organization or project you'd like to register, select Yes for the question "Have an organization or porject you'd like to register?". </p>
+       <p>The Feast Connects is an online tool that enables skilled, passionate people to connect with each other and contribute to the projects and enterprises transforming our world.</p>
+
+      <p>Fill out the Contributor signup form to participate in the special preview of the tool.  </p>
+
+      <p>If you also have a project or organization, select "Yes" for the question "Have an organization or project you'd like to register?". </p>
       </div>
     </div>
 
@@ -291,7 +263,7 @@ include_once('includes/header.php'); ?>
       </div>
     </td>
   </tr>
-  <tr>
+  <!--<tr>
     <td>
      <div class="form-group">
       <label for="instagram_id">Instagram</label>
@@ -321,7 +293,7 @@ include_once('includes/header.php'); ?>
     </div>
   </div>
 </td>
-</tr>
+</tr>-->
 <tr>
   <td colspan="2">
    <div class="form-group">
@@ -563,6 +535,7 @@ include_once('includes/header.php'); ?>
         <div class="input-group">
           <span class="input-group-addon">@</span>
           <input type="text" class="form-control" id="p_twitter_id" name="p_twitter_id" placeholder="feastongood">
+          <input type="text" style="display:none;" id="p_avatar" name="p_avatar" value=""> <!-- p_avatar url-->
         </div>
       </div>
 
@@ -655,7 +628,7 @@ include_once('includes/header.php'); ?>
     <!-- original submit <input class="ml_submit" type="submit" onClick="mixpanel.track('Beta signup form submit');"/> -->
    
     <input id="contribute_submit" type="submit" value="Submit" class="ml_submit">
-
+    <p>ps. If you entered in your @twitter handle, we'll add your avatar to your Connects profile.</p>
   </div>
 
 </div>

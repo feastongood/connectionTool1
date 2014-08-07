@@ -134,7 +134,7 @@ include_once('includes/header.php'); ?>
             <h1 style="font-size: 120px; color:#00debc;">Thanks!</h1>
             
             <p>Now you're ready to take part in The Feast Connects!<br/>
-           Launch of the preview will be around August 18th. Until then, check your inbox for more information.</p>
+           Until then, check your inbox for more information.</p>
           </div>
 
         </div>
