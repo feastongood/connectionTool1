@@ -72,12 +72,37 @@ $(function(){
     }); 
  
 
-	//callback handler for form submit
+	//callback handler for combined form submit
 	$("#contributor_form").submit(function( event )
 	{
 	    $(this).attr("disabled", "disabled");
 	    var postData = $('#contributor_form').serializeArray();
 	    var formURL = $('#contributor_form').attr("action");
+	    $.ajax(
+	    {
+	        url : formURL,
+	        type: "POST",
+	        data : postData,
+	        success:function(data, textStatus, jqXHR) 
+	        {
+	        	window.location.href = 'http://connection.feastongood.local/beta/thanks.php' + data;
+	        },
+	        error: function(jqXHR, textStatus, errorThrown) 
+	        {
+	        	alert('Oh no! There was a problem! Please email tash@feastongood.com to let us know.');
+	        }
+	    });
+
+		event.preventDefault(); //STOP default action
+	    
+	});
+
+	//callback handler for project form submit
+	$("#project_form").submit(function( event )
+	{
+	    $(this).attr("disabled", "disabled");
+	    var postData = $('#project_form').serializeArray();
+	    var formURL = $('#project_form').attr("action");
 	    $.ajax(
 	    {
 	        url : formURL,

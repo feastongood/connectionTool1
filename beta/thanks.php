@@ -36,19 +36,28 @@ ini_set('display_errors', 1);
 	$type = $_GET['type'];
 	
 	//--- get email from db, using user_id
-	$user = $db->get_row("SELECT first_name, email FROM beta_contributors WHERE id = $id");
 
-	$email_result = "";
+	if ($type == "org"){
+		$user = $db->get_row("SELECT name, email FROM beta_projects WHERE id = $id");
+		//email info array to send to the function
+		$email_info = array(
+			'fname' => $user->name,
+			'email' => $user->email,
+			'type'  => $type
+			);
 
-/******** Send confirmation email *****************	*/
-		
-
-	//email info array to send to the function
+	} else {
+		$user = $db->get_row("SELECT first_name, email FROM beta_contributors WHERE id = $id");
+		//email info array to send to the function
 		$email_info = array(
 			'fname' => $user->first_name,
 			'email' => $user->email,
 			'type'  => $type
 			);
+	}
+
+/******** Send confirmation email *****************	*/
+
 
 
 	// email functions
@@ -57,10 +66,10 @@ ini_set('display_errors', 1);
 			function format_email($email_info){
 			
 				//grab correct template content
-				if ($email_info['type'] == "project"){
-					$template = file_get_contents('php/emails/project_template.html');
-				} else {
+				if ($email_info['type'] == "contributor"){
 					$template = file_get_contents('php/emails/contributor_template.html');
+				} else {
+					$template = file_get_contents('php/emails/project_template.html');
 				}
 						
 				//replace all the tags
