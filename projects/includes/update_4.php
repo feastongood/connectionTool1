@@ -2,22 +2,22 @@
 <div class="update round">
     <div class="col-md-7"><!-- wins and rocks -->
       <h5>Wins</h5>
-      <p>In the Bay Area right now, just had great meetings with Google, Facebook and Yahoo about potentially working together to help make sure more youth get the support they need.</p>
+      <p>One of our data analyst interns did some incredible work identifying which variables have a statistically significant impact on counseling quality. We're bringing science to counseling!  </p>
 
       <h5>Rocks</h5>
-      <p>We need to hire an awesome PHP developer. </p>
+      <p>We have a lot going on right now, and I'm feeling like I'm behind on getting back to people on several fronts. </p>
 
       <p>posted by <a href="followers.php#Jen_Chiou">Jen Chiou</a><br/>
-      7/28/2014</p>
+      8/12/2014</p>
       
-      <?php echo $reply_links[12]; ?>
+      <?php echo $reply_links[15]; ?>
     </div>
     <div class="col-md-5 questions"><!-- question -->
     <h5>Questions</h5>
-    <p>Know any developers who might be interested in working at a tech startup that works to save teen lives using text message? (Job description <a href="http://www.crisistextline.org/who-we-are/jobs/#engineer">here</a>!)</p>
+    <p>Can folks share their favorite productivity tools/hacks/apps? </p>
     </div>
 
-    <button class="btn btn-primary btn-lg reply" data-toggle="modal" onClick="set_question(12);" data-target="#myModal">Reply</button>
+    <button class="btn btn-primary btn-lg reply" data-toggle="modal" onClick="set_question(15);" data-target="#myModal">Reply</button>
    
   </div><!--/update-->
 

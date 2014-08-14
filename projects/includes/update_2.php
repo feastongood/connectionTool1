@@ -1,24 +1,25 @@
 <div class="update round">
   <div class="col-md-7"><!-- wins and rocks -->
     <h5>Wins</h5>
-    <p>Had some amazing conversations, space, and insight on how we can offer value and look to our community to support and grow The Feast organically. This is super exciting as we figure out how to move away from a sponsorship model. Also came up with some fantastic generative community processes and actions.</p>
+    <p>Huge thanks to Chris Chavez for holding space for me. He facilitated a great trip upstate which gave my brain the space to put a bunch of pieces together very quickly in a way that staring at the problem never could.</p>
+
+    <p>Also lined up a workshop which lead to an exciting new model for The Feast based on participant support, strengthening community engagement and work on the ground. I really believe this evolution of the model will really turn this into the kind of  movement I know is possible. Also decided that our “fault-line” (Occupy’s is the 1%, Burning Man’s is the burning man) is Abundance. Thanks to Miko Matsumaru and Mischa Byruck for that one.  </p>
 
     <h5>Rocks</h5>
-    <p>Not enough time/ resources till October!</p>
+    <p>Building momentum and signing partners on board for the current year while we transition into a fully attendee supported system. We’re shifting but still need to rely on sponsors this year (I think) and they have been challenging to reach, come by, or close. Trying to figure out what value we can offer to more people to offset this need - or maybe I just need to pick up and get on the phone with people!
+</p>
 
     <p>posted by <a href="followers.php#Jerri_Chou">Jerri Chou</a><br/>
-    7/28/2014</p>
+    8/12/2014</p>
     
-    <?php echo $reply_links[10]; ?>
+    <?php echo $reply_links[14]; ?>
   </div>
   <div class="col-md-5 questions"><!-- question -->
   <h5>Questions</h5>
-  <p>What can we offer our community in the short term that would be super valuable? (Some unifying object/activity across the dinners around the world? Job opportunities?)</p>
-
-<p>In the long term? (Lessons -if so what kind, retreats, books?) </p>
+  <p>What partners do you think would appreciate our work enough to support it in a longer term fashion? <br/>What is the greatest value that The Feast can offer (aside from the conference) that you think people would pay for?</p>
   </div>
 
-  <button class="btn btn-primary btn-lg reply" rel="11" data-toggle="modal" onClick="set_question(10)" data-target="#myModal">Reply</button>
+  <button class="btn btn-primary btn-lg reply" rel="11" data-toggle="modal" onClick="set_question(14)" data-target="#myModal">Reply</button>
  
 </div><!--/update-->
 

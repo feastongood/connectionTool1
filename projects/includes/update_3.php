@@ -3,6 +3,30 @@
 <div class="update round">
                   <div class="col-md-7"><!-- wins and rocks -->
                     <h5>Wins</h5>
+                    <p>I brought on Jessa Clark to help with social media. We've decided to simplify Coastermatic's content and focus on Instagram and our mailing list. FB, Twitter, etc will all echo whatever is posted on Instagram. I'm really excited about this, it makes a lot of sense to narrow down on the amount of stuff that needs to be created this week, and put our energy into growing an audience in one place.</p>
+
+                    <h5>Rocks</h5>
+                    <p>As always, finding time! The trouble with side projects is that they can be neglected every now and then. I'm working on feeling ok with this. 
+</p>
+
+                    <p>posted by <a href="followers.php#Tash_Wong">Tash Wong</a><br/>
+                    8/12/2014</p>
+                    
+                    <?php echo $reply_links[13]; ?>
+                  </div>
+                  <div class="col-md-5 questions"><!-- question -->
+                  <h5>Questions</h5>
+                  <p>Who is your favorite illustrator or graphic artist?</p>
+
+                  </div>
+
+                  <button class="btn btn-primary btn-lg reply" rel="5" data-toggle="modal" onClick="set_question(13);" data-target="#myModal">Reply</button>
+                 
+                </div><!--/update-->
+
+<div class="update round">
+                  <div class="col-md-7"><!-- wins and rocks -->
+                    <h5>Wins</h5>
                     <p>The work on the backend is nearly complete! There were a few bumps along the way, but I'm pretty happy with the work.
 
 </p>
